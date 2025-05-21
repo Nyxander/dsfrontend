@@ -9,7 +9,7 @@ body {
 
 }
 
-/* NAVBAR */
+
 .main-header {
     position: relative;
     width: 100%;
@@ -17,6 +17,7 @@ body {
     background: #c98169;
     background: transparent;
 }
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -76,7 +77,8 @@ body {
     margin: 0.5rem 0 2.5rem 0;
     font-weight: 400;
 }
-/* HERO SECTION */
+
+
 .hero-bg {
     background: linear-gradient(rgba(30,30,30,0.6), rgba(30,30,30,0.6)), 
     url('../templates/images/bg-2.PNG') 
@@ -120,7 +122,6 @@ body {
     opacity: 0.85;
 }
 
-/* CATEGORIES SECTION */
 .categories-section {
     background: #e6f0ec;
     padding: 3rem 0 2rem 0;
@@ -172,17 +173,29 @@ body {
 /* EVENTS SECTION */
 .events-section {
     background: #e6f0ec;
-    padding: 3rem 0 2rem 20%;
-    
+    margin: 0 auto;
+    display: flex;
+    gap: 2.5rem;
+    max-width: 600px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 3rem 0 3rem 0;
 }
+
+.events-section a {
+    text-decoration: none;
+    color: #c97c67;
+}
+
 .events-content {
     display: flex;
     gap: 2.5rem;
-    max-width: 1100px;
-    margin: 0 auto 0 1.5rem;
+    max-width: 600px;
     align-items: flex-start;
     flex-wrap: wrap;
+    margin: 0 auto;
 }
+
 .events-list {
     flex: 2;
     display: flex;

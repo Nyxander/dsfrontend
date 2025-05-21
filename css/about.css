@@ -1,53 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');    
+@import url(color.s.css);
+@import url(font.s.css);
+    
+    .pagination {
+        display: flex;
+        justify-content: center;
+        margin-top: 1.5rem;
+    }
+    .pagination .active {
+        background-color: #c98169;
+        color: #fff;
+        border-color: #c98169;
+    }
 
-        /* header styling */
-        h1 {
-            color: green;
-        }
+     main {
+        display: flex;
+        justify-content: center;
+        margin-left: 1.5rem;
+        background-color: var(--background);
         
-        /* pagination position styling */
-        .pagination_section {
-            position: relative;
-        }
-        
-        /* pagination styling */
-        .pagination_section a {
-            color: black;
-            padding: 10px 18px;
-            text-decoration: none;
-        }
-        
-        /* pagination hover effect on non-active */
-        .pagination_section a:hover:not(.active) {
-            background-color: #031F3B;
-            color: white;
-        }
-        
-        /* pagination hover effect on active*/
-        
-        a:nth-child(5) {
-            background-color: green;
-            color: white;
-        }
-        
-        a:nth-child(1) {
-            font-weight: bold;
-        }
-        
-        a:nth-child(7) {
-            font-weight: bold;
-        }
-        
-        .content {
-            margin: 50px;
-            padding: 15px;
-            width: 700px;
-            height: 200px;
-            border: 2px solid black;
-        }
+    }
 
+    .content-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 800px;
+        margin: 10% 0 10% 0;
+        min-height: 27vh;
+    }
+    .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 70%;
+        margin: 0 0 10% 0;
+        min-height: 27vh;
+    }
 
-
-
+    .ch1{
+        font-family: var(--sub-heading-fonts);
+    }
 
         @import url('https://fonts.googleapis.com/css2?family=Faculteta+Glyphic:wght@700&display=swap');
 
@@ -58,19 +51,15 @@
             font-family: var(--body-fonts);
             margin: 0;
             padding: 0;
-            background: var(--background);
-            color: #222;
-        
         }
-        
-        /* From Uiverse.io by Gaurav-WebDev */ 
+   
         .button {
-            height: 50px;
+            height: auto !important;
             width: 200px;
             position: relative;
             background-color: transparent;
             cursor: pointer;
-            border: 2px solid #252525;
+            border: 2px solid #ad5132;
             overflow: hidden;
             border-radius: 30px;
             color: var(--background-d);
@@ -79,8 +68,11 @@
           
           .btn-txt {
             z-index: 1;
-            font-weight: 800;
             letter-spacing: 4px;
+            &:link, &:visited {
+              text-decoration: none;
+                color: #c98169!important;
+            }
           }
           
           .type1::after {
@@ -89,7 +81,7 @@
             left: 0;
             top: 0;
             transition: all 0.5s ease-in-out;
-            background-color: #333;
+            background-color: #ad5132;
             border-radius: 30px;
             visibility: hidden;
             height: 10px;
@@ -98,8 +90,8 @@
           }
           
           .button:hover {
-            box-shadow: 1px 1px 50px #252525;
-            color: #a8a8a8;
+            box-shadow: 1px 1px 50px #ad5132;
+            color: var(--kafe);
             border: none;
           }
           
@@ -148,7 +140,7 @@
             align-items: center;
         }
         .nav-links li a {
-            color: #fff;
+            color: #fff !important;
             text-decoration: none;
             font-size: 1.1rem;
             letter-spacing: 1px;
@@ -180,16 +172,24 @@
         }
         /* HERO SECTION */
         .hero-bg {
-            background: linear-gradient(rgba(30,30,30,0.6), rgba(30,30,30,0.6)), 
-            url('https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=1200&q=80') 
-            center/cover no-repeat;
+            background: linear-gradient(rgba(224, 206, 206, 0.3), rgba(240, 236, 236, 0.3)),            
+             url('../templates/images/2.png') center/cover no-repeat;
             min-height: 520px;
             display: flex;
             align-items: center;
             justify-content: center;
             position: relative;
             text-align: center;
+            font-family: 'Cinzel', serif;
+            font-size: 65px;
         }
+
+        .hero-bg a{
+            text-decoration: none;
+            color:#ffffff;
+            font-weight: 800;
+        }
+
         .hero-content {
             z-index: 2;
             color: #e0ebe5;
@@ -233,55 +233,6 @@
             font-size: 1.2rem;
             margin-top: 1.2rem;
             opacity: 0.85;
-        }
-        
-        /* CATEGORIES SECTION */
-        .categories-section {
-            background: #e6f0ec;
-            padding: 3rem 0 2rem 0;
-            text-align: center;
-        }
-        .section-title {
-            font-size: 2.5rem;
-            font-family: 'Montserrat', Arial, sans-serif;
-            font-weight: 700;
-            margin-bottom: 2.5rem;
-            color: #222;
-        }
-        .categories-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2.5rem 2rem;
-            max-width: 950px;
-            margin: 0 auto;
-        }
-        .category-item {
-            background: #fff;
-            border-radius: 0.5rem;
-            box-shadow: 0 2px 8px rgba(44, 62, 80, 0.08);
-            padding: 0 0 1.2rem 0;
-            transition: box-shadow 0.2s, transform 0.2s;
-            overflow: hidden;
-            text-align: center;
-        }
-        .category-item:hover {
-            box-shadow: 0 6px 18px rgba(44, 62, 80, 0.13);
-            transform: translateY(-4px) scale(1.03);
-        }
-        .category-item img {
-            width: 100%;
-            height: 160px;
-            object-fit: cover;
-            border-radius: 0.5rem 0.5rem 0 0;
-            margin-bottom: 0.7rem;
-        }
-        .category-item h3 {
-            font-size: 1.1rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: #222;
-            margin: 0;
         }
         
         /* EVENTS SECTION */
@@ -437,49 +388,83 @@
             letter-spacing: 1px;
             margin-top: 0;
         }
+
+.footer-links a {
+    font-family: 'Raleway', Arial, sans-serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-size: 1.1rem;
+}
         
-        /* RESPONSIVE DESIGN */
-        @media (max-width: 1100px) {
-            .categories-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-            .events-content {
-                flex-direction: column;
-                gap: 2rem;
-            }
-            .visit-store-section, .contact-section {
-                flex-direction: column;
-            }
-            .visit-store-img img, .contact-img img {
-                min-height: 220px;
-                max-height: 320px;
-            }
-            .visit-store-info, .contact-info {
-                align-items: center;
-                text-align: center;
-                padding: 2rem 1.2rem;
-            }
-        }
-        @media (max-width: 700px) {
-            .navbar {
-                flex-direction: column;
-                padding: 1rem 0.5rem 0 0.5rem;
-            }
-            .categories-grid {
-                grid-template-columns: 1fr;
-            }
-            .visit-store-info, .contact-info {
-                padding: 1.2rem 0.5rem;
-            }
-            .logo-title {
-                font-size: 2.2rem;
-            }
-        }
-        @media (max-width: 500px) {
-            .hero-content {
-                padding: 2rem 0.5rem 2rem 0.5rem;
-            }
-            .section-title {
-                font-size: 1.5rem;
-            }
-        }
+
+/* Responsive Design for Footer and Main Layout */
+@media (max-width: 991.98px) {
+    .footer-content {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 2rem;
+    }
+    .footer-logo,
+    .footer-text,
+    .footer-links {
+        width: 100%;
+        align-items: center;
+        margin-bottom: 1rem;
+    }
+    .footer-links {
+        flex-direction: row !important;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+    .footer-links a {
+        font-size: 1rem;
+    }
+    .hero-bg {
+        font-size: 2rem;
+        min-height: 300px;
+        padding: 1rem 0.5rem;
+    }
+    .logo-title {
+        font-size: 2rem;
+    }
+    .content-container,
+    .content {
+        max-width: 98vw;
+        margin: 5% 0;
+    }
+}
+
+@media (max-width: 700px) {
+    .navbar {
+        flex-direction: column;
+        padding: 1rem 0.5rem 0 0.5rem;
+    }
+    .logo-title {
+        font-size: 1.5rem;
+    }
+    .hero-bg {
+        font-size: 1.2rem;
+        min-height: 180px;
+    }
+    .footer-links {
+        gap: 0.5rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .hero-content {
+        padding: 1rem 0.2rem 1rem 0.2rem;
+    }
+    .section-title {
+        font-size: 1.1rem;
+    }
+    .footer-logo img,
+    .footer-text img {
+        height: 60px !important;
+        width: 60px !important;
+    }
+    .footer-links a {
+        font-size: 0.95rem;
+    }
+}

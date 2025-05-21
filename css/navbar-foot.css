@@ -1,0 +1,22 @@
+footer {
+            background: #222;
+            color: #fff;
+            text-align: center;
+            padding: 2rem 0;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 1.1rem;
+            letter-spacing: 1px;
+            margin-top: 0;
+            text-transform: uppercase;
+        }
+
+.footer-links a {
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-size: 1.1rem;
+    color: #ad5132!important;
+            font-weight: 800;
+            text-decoration: none;
+            transition: background 0.2s, color 0.2s;
+            cursor: pointer;
+}
