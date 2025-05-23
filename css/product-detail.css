@@ -1,0 +1,193 @@
+.product-detail-container {
+    padding: 2rem 0;
+    min-height: calc(100vh - 300px);
+}
+
+.breadcrumb {
+    background-color: transparent;
+    padding: 0.5rem 0;
+}
+
+.breadcrumb-item a {
+    color: #c98169;
+    text-decoration: none;
+}
+
+.breadcrumb-item.active {
+    color: #666;
+}
+
+.product-detail-content {
+    margin-top: 2rem;
+}
+
+.product-image-container {
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.product-image {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    object-fit: cover;
+}
+
+.product-info {
+    padding: 1rem;
+}
+
+.product-title {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+    font-family: 'Fredericka the Great', cursive;
+}
+
+.product-author {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.product-category {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #f0f0f0;
+    border-radius: 4px;
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.product-description h3,
+.product-details h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+    font-family: 'Fredericka the Great', cursive;
+}
+
+.product-description p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.details-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.details-list li {
+    margin-bottom: 0.5rem;
+    color: #666;
+}
+
+.details-list strong {
+    color: #333;
+    margin-right: 0.5rem;
+}
+
+.product-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+.reserve-btn,
+.share-btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.reserve-btn {
+    background-color: #c98169;
+    border-color: #c98169;
+}
+
+.reserve-btn:hover {
+    background-color: #a66a57;
+    border-color: #a66a57;
+}
+
+.share-btn {
+    color: #c98169;
+    border-color: #c98169;
+}
+
+.share-btn:hover {
+    background-color: #c98169;
+    color: white;
+}
+
+.related-books {
+    margin-top: 4rem;
+}
+
+.related-books h2 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 2rem;
+    font-family: 'Fredericka the Great', cursive;
+}
+
+.related-book-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+}
+
+.related-book-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.related-book-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.related-book-info {
+    padding: 1rem;
+}
+
+.related-book-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.related-book-author {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .product-image-container {
+        margin-bottom: 2rem;
+    }
+
+    .product-title {
+        font-size: 1.5rem;
+    }
+
+    .product-actions {
+        flex-direction: column;
+    }
+
+    .reserve-btn,
+    .share-btn {
+        width: 100%;
+        justify-content: center;
+    }
+} 
