@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Faculteta+Glyphic:wght@700&display=swap');
+
+@import url(color.s.css);
+@import url(font.s.css);
 h1 { text-align: center; }
         .catalogue { display: flex; flex-wrap: wrap; gap: 24px; justify-content: center; }
         .book-card {
@@ -25,88 +29,11 @@ h1 { text-align: center; }
 
 
 
-body {
-    font-family: 'Segoe UI', Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background: #e6f0ec;
-    color: #222;
-
-}
-
-
-.main-header {
-    position: relative;
-    width: 100%;
-    min-height: 150px;
-    background: #c98169;
-    background: transparent;
-}
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.5rem 3rem 0 3rem;
-    position: relative;
-    z-index: 2;
-    background: #c98169;
-    margin-bottom: 2rem; 
-}
-.navbar-left {
-    display: flex;
-    align-items: center;
-}
-.menu-icon {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-    gap: 6px;
-}
-.nav-links {
-    display: flex;
-    gap: 2.5rem;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    align-items: center;
-}
-.nav-links li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.1rem;
-    letter-spacing: 1px;
-    font-weight: 500;
-    transition: color 0.2s;
-    display: flex;
-    align-items: center;
-}
-.nav-links li a i {
-    margin-right: 0.4rem;
-    font-size: 1.2em;
-}
-.nav-links li a:hover {
-    color: #e0ebe5;
-}
-.logo-title {
-    font-family: 'Fredericka the Great', cursive;
-    font-size: 3.5rem;
-    letter-spacing: 0.4rem;
-    color: #fff;
-    margin: 0;
-    /*font-weight: 700;*/
-}
-.logo-subtitle {
-    color: #fff;
-    font-size: 1.2rem;
-    margin: 0.5rem 0 2.5rem 0;
-    font-weight: 400;
-}
 
 
 .hero-bg {
     background: linear-gradient(rgba(30,30,30,0.6), rgba(30,30,30,0.6)), 
-    url('../templates/images/bg-2.PNG') 
+    url('../templates/images/bg-3.PNG') 
     center/cover no-repeat;
     min-height: 520px;
     display: flex;
@@ -293,4 +220,15 @@ footer {
     .section-title {
         font-size: 1.5rem;
     }
+}
+
+@media (max-width: 400px) {
+  .search-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search-icon {
+    width: 100%;
+  }
 }
