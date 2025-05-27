@@ -3,6 +3,7 @@
 
 @import url(color.s.css);
 @import url(font.s.css);
+
 .hero-bg {
     background: linear-gradient(rgba(30,30,30,0.6), rgba(30,30,30,0.6)), 
     url('../templates/images/bg-2.PNG') 
@@ -52,6 +53,12 @@
     padding: 3rem 0 2rem 0;
     text-align: center;
 }
+
+.categories-section a{
+    text-decoration: none;
+    color: #c97c67;
+}
+
 .section-title {
     font-size: 2.5rem;
     font-family: 'Montserrat', Arial, sans-serif;

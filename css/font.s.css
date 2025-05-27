@@ -1,7 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');    
+@import url('https://fonts.googleapis.com/css2?family=Faculteta+Glyphic:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap');
 
 :root{
     --body-fonts: "Roboto" , sans-serif;
     --heading-fonts: 'Cinzel', serif;
     --sub-heading-fonts: "Raleway", sans-serif;
+    --quote: "Fredericka the Great", cursive;
+
 }

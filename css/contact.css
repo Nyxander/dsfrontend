@@ -8,7 +8,7 @@
     background: none !important; 
     position: relative;
     min-height: fit-content;
-    height: auto;
+    height: 85vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -36,7 +36,7 @@
 
 .hero-content {
     z-index: 2;
-    color: #000000;
+    color: #fff;
     padding: 4rem 2rem 3rem 2rem;
     gap: 10rem;
 }
@@ -181,7 +181,7 @@
 }
 .contact-info {
     flex: 1;
-    background: #c98169;
+    background: var(--mint2);
     color: #fff;
     display: flex;
     flex-direction: column;
@@ -400,9 +400,6 @@ footer {
     }
 }
 @media (max-width: 600px) {
-    .hero-bg form {
-        padding: 1rem 0.5rem;
-    }
     .hero-bg .form-row {
         flex-direction: column;
         gap: 0.5rem;

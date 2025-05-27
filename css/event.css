@@ -1,14 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Fraunces:wght@400;700&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Faculteta+Glyphic:wght@700&display=swap');
-
 @import url(color.s.css);
 @import url(font.s.css);
+
 .hero-bg {
     background: linear-gradient(rgba(30,30,30,0.6), rgba(30,30,30,0.6)), 
     url('../templates/images/4.PNG') 
     center/cover no-repeat;
-    min-height: 520px;
+    height: 85vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -21,6 +20,14 @@
     padding: 4rem 2rem 3rem 2rem;
 }
 
+.logo-subtitle {
+    color: #fff;
+    font-style: italic;
+    font-family: 'Fraunces', serif;
+    font-size: 1.2rem;
+    margin-top: 1.2rem;
+    opacity: 0.85;
+}
 
 /* Section Styles */
 section {
