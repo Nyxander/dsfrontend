@@ -10,7 +10,6 @@ body {
 }
 
 body {
-    font-family: var(--body-fonts);
     margin: 0;
     padding: 0;
     background: var(--background);
@@ -160,3 +159,7 @@ footer {
     font-size: 1.1rem;
 }
       
+
+.bi{
+    color: #ad5132!important;   
+}
