@@ -1,109 +1,38 @@
-const sampleBooks = [
-    {
-        id: 1,
-        title: "Princi i Vogël",
-        author: "Antoine de Saint-Exupéry",
-        category: "classic",
-        image: "images/class.jpg",
-        description: "Një roman filozofik për të gjithë moshat."
-    },
-    {
-        id: 2,
-        title: "1984",
-        author: "George Orwell",
-        category: "classic",
-        image: "images/moderne.jpg",
-        description: "Një distopi e shkruar në vitin 1949."
-    },
-    {
-        id: 3,
-        title: "Harry Potter dhe Guri Filozofal",
-        author: "J.K. Rowling",
-        category: "children",
-        image: "images/teen.png",
-        description: "Historia e Harry Potter dhe aventurës së tij në shkollën e magjisë Hogwarts."
-    },
-    {
-        id: 4,
-        title: "Ana Karenina",
-        author: "Leo Tolstoy",
-        category: "classic",
-        image: "images/class.jpg",
-        description: "Një roman klasik rreth dashurisë, tradhtisë dhe shoqërisë ruse."
-    },
-    {
-        id: 5,
-        title: "Përrallat e Grimm",
-        author: "Vëllezërit Grimm",
-        category: "children",
-        image: "images/teen.png",
-        description: "Koleksion i përrallave tradicionale gjermane."
-    },
-    {
-        id: 6,
-        title: "Planeti i kuq",
-        author: " V.M. Rabolu",
-        category: "science",
-        image: "images/sc.png",
-        description: "Herkolubusi ose Planeti i Kuq është pesë ose gjashtë herë më i madh nga Jupiteri, është një gjigant i madh, kështu që asgjë nuk mund ta pengojë apo ta shmangë."
-    },
-    {
-        id: 7,
-        title: "Një Dashuri në Ditët e Luftës",
-        author: "Ismail Kadare",
-        category: "modern",
-        image: "images/moderne.jpg",
-        description: "Roman modern shqiptar rreth dashurisë gjatë periudhës së luftës."
-    },
-    {
-        id: 8,
-        title: "Përralla nga Shqipëria",
-        author: "Robert Elsie",
-        category: "children",
-        image: "images/teen.png",
-        description: "Koleksion i përrallave tradicionale shqiptare."
-    },
-    {
-        id: 9,
-        title: "Kënga e Rolandit",
-        author: "Anonim",
-        category: "classic",
-        image: "images/class.jpg",
-        description: "Poemë epike franceze e mesjetës."
-    },
-    {
-        id: 10,
-        title: "Teoria e Relativitetit",
-        author: "Albert Einstein",
-        category: "science",
-        image: "images/sc.png",
-        description: "Vepra revolucionare mbi teorinë e relativitetit."
-    },
-    {
-        id: 11,
-        title: "Kronika në Gur",
-        author: "Ismail Kadare",
-        category: "modern",
-        image: "images/moderne.jpg",
-        description: "Roman modern shqiptar rreth historisë dhe identitetit."
-    },
-    {
-        id: 12,
-        title: "Përralla nga Bota",
-        author: "Hans Christian Andersen",
-        category: "children",
-        image: "images/teen.png",
-        description: "Koleksion i përrallave nga të gjithë bota."
-    },
-    {
-        id: 13,
-        title: "Fizika e Së Ardhmes",
-        author: "Michio Kaku",
-        category: "science",
-        image: "images/sc.png",
-        description: "Një vështrim në zhvillimet e ardhshme të shkencës."
-    }
+const sampleBooks = 
+[
+  { id: 1, title: "Don Kishoti", author: "Miguel de Cervantes", category: "classic", image: "images/books/classic1.png", description: "Një nga romanet më të famshme të letërsisë botërore, që ndjek aventurat e Don Kishotit dhe Sanço Panços." },
+  { id: 2, title: "Ana Karenina", author: "Lev Tolstoi", category: "classic", image: "images/books/classic2.png", description: "Një roman klasik rreth dashurisë, tradhtisë dhe shoqërisë ruse." },
+  { id: 13, title: "Krim dhe Ndëshkm", author: "Fyodor Dostoevsky", category: "classic", image: "images/books/classic3.png", description: "Një roman i thellë psikologjik mbi fajin, pendesën dhe shpëtimin." },
+  { id: 14, title: "Zonja Bovari", author: "Gustave Flaubert", category: "classic", image: "images/books/classic4.png", description: "Historia tragjike e Emës, një grua që kërkon dashuri dhe kuptim përtej jetës së saj të zakonshme." },
+  { id: 15, title: "Krenari dhe paragjykim", author: "Jane Austen", category: "classic", image: "images/books/classic5.png", description: "Një roman i njohur për humorin dhe vëzhgimin e hollë të shoqërisë angleze." },
+  { id: 16, title: "Uliksi", author: "James Joyce", category: "classic", image: "images/books/classic6.png", description: "Një kryevepër moderniste që ndjek një ditë në jetën e Leopold Bloom në Dublin." },
+
+  { id: 3, title: "1984", author: "George Orwell", category: "modern", image: "images/books/modern1.jpg", description: "Një distopi e shkruar në vitin 1949, që përshkruan një shoqëri të kontrolluar nga një regjim totalitar." },
+  { id: 4, title: "Getsbi i Madh", author: "F. Scott Fitzgerald", category: "modern", image: "images/books/modern2.jpg", description: "Një roman për ëndrrën amerikane, dashurinë dhe humbjen në vitet 1920." },
+  { id: 17, title: "Njëqind Vjet Vetmi", author: "Gabriel García Márquez", category: "modern", image: "images/books/modern3.jpg", description: "Saga magjike e familjes Buendía në qytetin imagjinar të Macondo." },
+  { id: 18, title: "Lolita", author: "Vladimir Nabokov", category: "modern", image: "images/books/modern4.jpg", description: "Një thriller psikologjik rreth imoralitetit, obsesionit dhe abuzimit seksual." },
+  { id: 19, title: "Brave New World", author: "Aldous Huxley", category: "modern", image: "images/books/modern5.jpg", description: "Një roman distopik që sfidon normat sociale dhe teknologjike." },
+  { id: 20, title: "The Alchimist", author: "Paulo Coelho", category: "modern", image: "images/books/modern6.jpg", description: "Një tregim frymëzues për një bari që ndjek ëndrrën e tij për të gjetur një thesar." },
+
+  { id: 5, title: "Harry Potter dhe Guri Filozofal", author: "J.K. Rowling", category: "children", image: "images/books/children1.jpg", description: "Fillimi magjik i një sage ku një djalë zbulon se është magjistar dhe nis aventurën e tij." },
+  { id: 6, title: "The Hobbit", author: "J.R.R. Tolkien", category: "children", image: "images/books/children2.jpg", description: "Një udhëtim epik i Bilbo Baggins për të rifituar thesarin nga dragoi Smaug." },
+  { id: 21, title: "Charlie dhe Fabrika e Çokollatës", author: "Roald Dahl", category: "children", image: "images/books/children3.jpg", description: "Një djalë i varfër fiton një biletë të artë dhe viziton fabrikën magjike të çokollatës." },
+  { id: 22, title: "Matilda", author: "Roald Dahl", category: "children", image: "images/books/children4.jpg", description: "Një vajzë e zgjuar me aftësi të jashtëzakonshme përballet me një drejtoreshë të ligë." },
+  { id: 23, title: "Artemis Fowl", author: "Eoin Colfer", category: "children", image: "images/books/children5.jpg", description: "Një gjeni kriminel 12-vjeçar përballet me një botë sekrete të elfeve." },
+  { id: 24, title: "The Chronicles of Narnia vol. 1", author: "C.S. Lewis", category: "children", image: "images/books/children6.jpg", description: "Katër fëmijë zbulojnë një botë magjike përmes një gardërobe." },
+
+  { id: 7, title: "A Brief History of Time", author: "Stephen Hawking", category: "science", image: "images/books/science1.jpg", description: "Një udhërrëfyes për universin që shpjegon konceptet komplekse të kozmologjisë." },
+  { id: 8, title: "The Selfish Gene", author: "Richard Dawkins", category: "science", image: "images/books/science2.jpg", description: "Një teori që shpjegon evoluimin përmes perspektivës së gjeneve." },
+  { id: 25, title: "Sapiens", author: "Yuval Noah Harari", category: "science", image: "images/books/science3.jpg", description: "Një histori e njerëzimit, nga Homo sapiens deri në inteligjencën artificiale." },
+  { id: 26, title: "IN SEARCH OF SCHRODINGER'S CAT", author: "John Gribbins", category: "science", image: "images/books/science4.jpg", description: "Një eksplorim i teorisë kuantike dhe mistereve të saj." },
+  { id: 27, title: "Cosmos", author: "Dr. Becky Smethurst", category: "science", image: "images/books/science5.jpg", description: "Një udhëtim përmes universit me sqarime të thjeshta mbi galaktikat." },
+  { id: 28, title: "ON THE ORIGIN OF TIME", author: "THOMAS HERTOG", category: "science", image: "images/books/science6.jpg", description: "Një vështrim mbi kohën dhe universin, bazuar në punën me Stephen Hawking." },
+
+  { id: 9, title: "The Da Vinci Code", author: "Dan Brown", category: "bestseller", image: "images/books/best1.jpg", description: "Një thriller plot mistere për një sekret të fshehur nga Kisha Katolike." },
+  { id: 10, title: "The Handmaid's Tale", author: "Margaret Atwood", category: "bestseller", image: "images/books/best2.jpg", description: "Një tregim distopik për një shoqëri ku gratë trajtohen si pronë." },
+  { id: 29, title: "The Kite Runner", author: "Khaled Hosseini", category: "bestseller", image: "images/books/best3.jpg", description: "Një histori prekëse për miqësinë, fajin dhe faljen në Afganistan." }
 ];
+
 
 
 let currentPage = 1;
@@ -176,7 +105,9 @@ function displayResults() {
     } else {
         resultsContainer.innerHTML = paginatedResults.map(book => `
             <div class="book-card">
+                <a href= "./product-detail.html?id=${book.id}">
                 <img src="${book.image}" alt="${book.title}" class="book-image">
+                </a>     
                 <div class="book-info">
                     <h3 class="book-title">${book.title}</h3>
                     <p class="book-author">${book.author}</p>
