@@ -549,6 +549,7 @@ function loadRelatedBooks(category, currentBookId) {
 function getCategoryName(category) {
     const categories = {
         'classic': 'Letërsi Klasike',
+        'bestseller': 'Bestseller',
         'modern': 'Romane Modern',
         'children': 'Fëmijë & Adoleshentë',
         'science': 'Filozofi & Shkencë',

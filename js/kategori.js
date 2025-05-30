@@ -173,7 +173,7 @@
                                 <small class="text-muted ms-2">(${book.rating})</small>
                             </div>
                             <div class="d-flex justify-content-between align-items-center">
-                                <a href="./book-details.html?id=${book.id}" class="btn btn-primary">Më shumë</a>
+                                <a href="../templates/product-detail.html?id=${book.id}" class="btn btn-primary">Më shumë</a>
                                 <button class="btn btn-outline-primary" onclick="addToCart(${book.id})">
                                     <i class="bi bi-cart-plus"></i>
                                 </button>
