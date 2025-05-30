@@ -158,7 +158,9 @@
                 bookElement.innerHTML = `
                     <div class="card h-100">
                         <div class="position-relative">
+                        <a href="../templates/product-detail.html?id=${book.id}">
                             <img src="${book.image}" class="card-img-top img-thumbnail" alt="${book.title}">
+                        </a>
                             <div class="position-absolute top-0 end-0 m-2">
                                 <span class="badge bg-primary">${book.price}</span>
                             </div>
@@ -183,11 +185,8 @@
             });
         }
 
-        // Function to handle adding to cart (mock implementation)
         function addToCart(bookId) {
             alert('Libri u shtua në shportë!');
         }
-
-        // Call the function when the page loads
         window.onload = displayBooks;
     
