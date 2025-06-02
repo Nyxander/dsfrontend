@@ -493,6 +493,12 @@ const books = {
     },
     44:{ id: 44, title: "The Gene: An Intimate History",  category:"science", author: "Siddhartha Mukherjee", image: "images/books/science8.jpg", price: "2,200 ALL", rating: 4.8,
     description:"From the Pulitzer Prize-winning, bestselling author of The Emperor of All Maladies--a magnificent history of the gene and a response to the defining question of the future: What becomes of being human when we learn to \"read\" and \"write\" our own genetic information?\n"}
+,   45: { id: 45, title: "Where the Crawdads Sing", author: "Delia Owens", image: "images/books/best7.jpg", price: "1,700 ALL", rating: 4.9,
+        category: "bestseller", description: "Where the Crawdads Sing is a 2018 coming-of-age murder mystery novel by American zoologist Delia Owens. The story follows two timelines that slowly intertwine. The first timeline describes the life and adventures of a young girl named Kya as she grows up isolated in the marshes of North Carolina."
+    },
+    46: { id: 46, title: "Twisted Hate", author: "Ana Huang", image: "images/books/best8.jpg", price: "1,400 ALL", rating: 4.9
+    , category: "bestseller", description: "Discover the addictive world of the Twisted series from TikTok sensation, Ana Huang!Read Twisted Hate now for a steamy enemies to lovers romance. "
+    }
 
 
 

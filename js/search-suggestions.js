@@ -33,7 +33,9 @@ const bookTitles = [
     "Përrallat e Andersenit",
     "Peter Pan",
     "Astrophysics for People in a Hurry",
-    "The Gene: An Intimate History"
+    "The Gene: An Intimate History",
+    "Where the Crawdads Sing",
+    "Twisted Hate"
 
 ];
 

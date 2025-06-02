@@ -1,7 +1,5 @@
-// kategori.js
-        const booksByCategory = {
-            classic: {
-                title: "LETËRSIA KLASIKE",
+ const booksByCategory = {
+            classic: {title: "LETËRSIA KLASIKE",
                 books: [
                     { id: 1, title: "Don Kishoti", author: "Miguel de Cervantes", image: "images/books/classic1.png", price: "1,200 ALL", rating: 4.8 },
                     { id: 2, title: "Ana Karenina", author: "Lev Tolstoi", image: "images/books/classic2.png", price: "1,500 ALL", rating: 4.7 },
@@ -13,6 +11,7 @@
                     { id: 38, title: "In Search Of Lost Time Volume 1 - The Way By Swann's", author: "Marcel Proust", image: "images/books/classic8.png", price: "1,200 ALL", rating: 4.7 }
                 ]
             },
+
             modern: {
                 title: "ROMANE MODERN",
                 books: [
@@ -27,6 +26,7 @@
 
                 ]
             },
+
             children: {
                 title: "FËMIJË & ADOLESHENTË",
                 books: [
@@ -40,6 +40,7 @@
                     { id: 42, title: "Peter Pan", author: "J.M. Barrie", image: "images/books/children8.jpg", price: "1,000 ALL", rating: 4.7 }
                 ]
             },
+
             science: {
                 title: "FILOZOFI & SHKENCË",
                 books: [
@@ -54,6 +55,7 @@
                 ]
 
             },
+
             bestseller: {
                 title: "BESTSELLER",
                 books: [
@@ -62,7 +64,9 @@
                     { id: 29, title: "The Kite Runner", author: "Khaled Hosseini", image: "images/books/best3.jpg", price: "1,400 ALL", rating: 4.9 },
                     { id: 30, title: "The Book Thief", author: "Markus Zusak", image: "images/books/best4.jpg", price: "1,500 ALL", rating: 4.8 },
                     { id: 31, title: "Life of Pi", author: "Yann Martel", image: "images/books/best5.jpg", price: "1,400 ALL", rating: 4.7 },
-                    { id: 32, title: "The Help", author: "Kathryn Stockett", image: "images/books/best6.jpg", price: "1,600 ALL", rating: 4.8 }
+                    { id: 32, title: "The Help", author: "Kathryn Stockett", image: "images/books/best6.jpg", price: "1,600 ALL", rating: 4.8 },
+                    { id: 45, title: "Where the Crawdads Sing", author: "Delia Owens", image: "images/books/best7.jpg", price: "1,700 ALL", rating: 4.9 },
+                    { id: 46, title: "Twisted Hate", author: "Ana Huang", image: "images/books/best8.jpg", price: "1,400 ALL", rating: 4.9  }
                 ]
             },
             gifts: {
