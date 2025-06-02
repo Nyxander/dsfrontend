@@ -480,12 +480,20 @@ const books = {
     41:{ id: 41,
         title: "Përrallat e Andersenit",
         author: "Hans Christian Andersen", image: "images/books/children7.jpg", price: "900 ALL", rating: 4.8,
+        category: "children",
         description: "Nje koleksion i perrallave me te famshme ne bote. Keto te autorit H. K. Andersen."
     },
     42:{ id: 42, title: "Peter Pan", author: "J.M. Barrie", image: "images/books/children8.jpg",
-        price: "1,000 ALL", rating: 4.7,
+        price: "1,000 ALL", rating: 4.7, category: "children",
         description: "Second to the right ...and then straight on till morning!' Desperate to hear bedtime stories, Peter Pan waits outside the nursery window of Wendy, John and Michael Darling. "
-    }
+    },
+    43:{ id: 43, title: "Astrophysics for People in a Hurry", category:"science", author: "Neil deGrasse Tyson",
+        image: "images/books/science7.jpg", price: "1,700 ALL", rating: 4.6 ,
+        description: "What is the nature of space and time? How do we fit within the universe? How does the universe fit within us? There’s no better guide through these mind-expanding questions than acclaimed astrophysicist and best-selling author Neil deGrasse Tyson."
+    },
+    44:{ id: 44, title: "The Gene: An Intimate History",  category:"science", author: "Siddhartha Mukherjee", image: "images/books/science8.jpg", price: "2,200 ALL", rating: 4.8,
+    description:"From the Pulitzer Prize-winning, bestselling author of The Emperor of All Maladies--a magnificent history of the gene and a response to the defining question of the future: What becomes of being human when we learn to \"read\" and \"write\" our own genetic information?\n"}
+
 
 
 };

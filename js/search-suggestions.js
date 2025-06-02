@@ -31,7 +31,9 @@ const bookTitles = [
   "Veronika vendos të vdesë",
   "Kafka ne breg",
     "Përrallat e Andersenit",
-    "Peter Pan"
+    "Peter Pan",
+    "Astrophysics for People in a Hurry",
+    "The Gene: An Intimate History"
 
 ];
 

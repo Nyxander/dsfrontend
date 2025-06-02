@@ -48,8 +48,11 @@
                     { id: 25, title: "Sapiens", author: "Yuval Noah Harari", image: "images/books/science3.jpg", price: "2,000 ALL", rating: 4.9 },
                     { id: 26, title: "IN SEARCH OF SCHRODINGER'S CAT", author: "John Gribbins", image: "images/books/science4.jpg", price: "1,800 ALL", rating: 4.6 },
                     { id: 27, title: "Cosmos", author: "Dr. Becky Smethurst", image: "images/books/science5.jpg", price: "1,900 ALL", rating: 4.8 },
-                    { id: 28, title: "ON THE ORIGIN OF TIME", author: "THOMAS HERTOG", image: "images/books/science6.jpg", price: "2,100 ALL", rating: 4.7 }
+                    { id: 28, title: "ON THE ORIGIN OF TIME", author: "THOMAS HERTOG", image: "images/books/science6.jpg", price: "2,100 ALL", rating: 4.7 },
+                    { id: 43, title: "Astrophysics for People in a Hurry", author: "Neil deGrasse Tyson", image: "images/books/science7.jpg", price: "1,700 ALL", rating: 4.6 },
+                    { id: 44, title: "The Gene: An Intimate History", author: "Siddhartha Mukherjee", image: "images/books/science8.jpg", price: "2,200 ALL", rating: 4.8 }
                 ]
+
             },
             bestseller: {
                 title: "BESTSELLER",
