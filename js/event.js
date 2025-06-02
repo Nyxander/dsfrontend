@@ -8,7 +8,7 @@ const events = {
     },
 
 
-    2:{
+    2: {
         id: 2,
         emri: "FLASIM ME... VIKTOR CANOSINAJ",
         bashkepunetor: "VIKTOR CANOSINAJ",
