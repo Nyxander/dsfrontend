@@ -465,7 +465,18 @@ const books = {
     35:{ id: 35, title: "ALICE ASLEEP FROM ALICE‘S ADVENTURES IN WONDERLAND BOOKMARKS", category:"gifts", author: "Flame Tree Publishing", image: "images/books/gift5.jpg", price: "500 ALL", rating: 4.9, description: "Dream alongside Alice with this enchanting bookmark set, showcasing the beloved character asleep in Wonderland. A must-have for collectors and readers alike, these bookmarks add a whimsical charm to any reading experience."  },
     36:{ id: 36, title: "AIMEE STEWART: VINTAGE COOK BOOK LIBRARY (FOILED JOURNAL)", category:"gifts", author: "Flame Tree Publishing", image: "images/books/gift6.jpg", price: "1,400 ALL", rating: 4.7, description: "Dive into a nostalgic world of culinary charm with this foiled journal designed by Aimee Stewart. Featuring a vintage cookbook library cover, it’s perfect for jotting recipes, ideas, or daily reflections, all within a beautifully crafted keepsake."  },
     37:{ id: 37, title: "Vëllezërit Karamazov vol. 1", author: "Fyodor Dostoevsky", category:"classic", image: "images/books/classic7.png", price: "1,400 ALL", rating: 5.0, description: "Nëse do të mëkatosh vetë dhe do të pikëllohesh deri në vdekje për mëkatet e tua apo për ndonjë mëkat të rastësishëm, atëherë gëzohu për tjetrin, gëzohu për të drejtin, për atë ..." },
-    38:{ id: 38, title: "In Search Of Lost Time Volume 1 - The Way By Swann's", category:"classic",  author: "Marcel Proust", image: "images/books/classic8.png", price: "1,200 ALL", rating: 4.7, description: "One of the greatest, most entertaining reading experiences in any language, Marcel Proust's In Search of Lost Time Vol. 1: The Way by Swann's is published in a new translation from the French by Lydia ..." }
+    38:{ id: 38, title: "In Search Of Lost Time Volume 1 - The Way By Swann's", category:"classic",  author: "Marcel Proust", image: "images/books/classic8.png", price: "1,200 ALL", rating: 4.7, description: "One of the greatest, most entertaining reading experiences in any language, Marcel Proust's In Search of Lost Time Vol. 1: The Way by Swann's is published in a new translation from the French by Lydia ..." },
+    39:{ id: 39, title: "Veronika vendos të vdesë", author: "Paulo Coelho",
+        category: "modern",
+        image: "images/books/modern7.jpg", price: "1,100 ALL", rating: 4.6,
+        description: "“Një libër shumë origjinal, prekës dhe, në fund të fundit, inkurajues.”"
+    },
+
+    40:{ id: 40, title: "Kafka në breg", author: "Haruki Murakami",
+        category: "modern",
+        image: "images/books/modern8.jpg",
+        price: "1,600 ALL", rating: 4.9 }
+
 };
 
 function getBookIdFromUrl() {

@@ -21,7 +21,10 @@
                     { id: 17, title: "Njëqind Vjet Vetmi", author: "Gabriel García Márquez", image: "images/books/modern3.jpg", price: "1,400 ALL", rating: 4.9 },
                     { id: 18, title: "Lolita", author: "Vladimir Nabokov", image: "images/books/modern4.jpg", price: "1,500 ALL", rating: 4.6 },
                     { id: 19, title: "Brave New World", author: "Aldous Huxley", image: "images/books/modern5.jpg", price: "1,300 ALL", rating: 4.7 },
-                    { id: 20, title: "The Alchimist", author: "	Paulo Coelho", image: "images/books/modern6.jpg", price: "1,200 ALL", rating: 4.8 }
+                    { id: 20, title: "The Alchimist", author: "	Paulo Coelho", image: "images/books/modern6.jpg", price: "1,200 ALL", rating: 4.8 },
+                    { id: 39, title: "Veronika vendos të vdesë", author: "Paulo Coelho", image: "images/books/modern7.jpg", price: "1,100 ALL", rating: 4.6 },
+                    { id: 40, title: "Kafka në breg", author: "Haruki Murakami", image: "images/books/modern8.jpg", price: "1,600 ALL", rating: 4.9 }
+
                 ]
             },
             children: {

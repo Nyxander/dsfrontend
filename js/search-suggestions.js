@@ -1,4 +1,3 @@
-// Sample book titles for suggestions (replace with actual API calls in production)
 const bookTitles = [
 "Don Kishoti",
   "Ana Karenina",
@@ -28,7 +27,9 @@ const bookTitles = [
   "The Handmaid's Tale",
   "The Kite Runner",
   "Vellezerit Karamazov vol. 1",
-  "In Search Of Lost Time Volume 1 - The Way By Swann's"
+  "In Search Of Lost Time Volume 1 - The Way By Swann's",
+  "Veronika vendos të vdesë",
+  "Kafka ne breg"
 
 ];
 
