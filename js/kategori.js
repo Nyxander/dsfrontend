@@ -35,7 +35,9 @@
                     { id: 21, title: "Charlie dhe Fabrika e Çokollatës", author: "Roald Dahl", image: "images/books/children3.jpg", price: "1,200 ALL", rating: 4.7 },
                     { id: 22, title: "Matilda", author: "Roald Dahl", image: "images/books/children4.jpg", price: "1,200 ALL", rating: 4.8 },
                     { id: 23, title: "Artemis Fowl", author: "Eoin Colfer", image: "images/books/children5.jpg", price: "800 ALL", rating: 4.6 },
-                    { id: 24, title: "The Chronicles of Narnia vol. 1", author: "C.S. Lewis", image: "images/books/children6.jpg", price: "700 ALL", rating: 4.7 }
+                    { id: 24, title: "The Chronicles of Narnia vol. 1", author: "C.S. Lewis", image: "images/books/children6.jpg", price: "700 ALL", rating: 4.7 },
+                    { id: 41, title: "Përrallat e Andersenit", author: "Hans Christian Andersen", image: "images/books/children7.jpg", price: "900 ALL", rating: 4.8 },
+                    { id: 42, title: "Peter Pan", author: "J.M. Barrie", image: "images/books/children8.jpg", price: "1,000 ALL", rating: 4.7 }
                 ]
             },
             science: {

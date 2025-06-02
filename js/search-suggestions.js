@@ -29,7 +29,9 @@ const bookTitles = [
   "Vellezerit Karamazov vol. 1",
   "In Search Of Lost Time Volume 1 - The Way By Swann's",
   "Veronika vendos të vdesë",
-  "Kafka ne breg"
+  "Kafka ne breg",
+    "Përrallat e Andersenit",
+    "Peter Pan"
 
 ];
 

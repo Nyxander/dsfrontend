@@ -40,6 +40,15 @@ const sampleBooks =
   { id: 22, title: "Matilda", author: "Roald Dahl", category: "children", image: "images/books/children4.jpg", description: "Një vajzë e zgjuar me aftësi të jashtëzakonshme përballet me një drejtoreshë të ligë." },
   { id: 23, title: "Artemis Fowl", author: "Eoin Colfer", category: "children", image: "images/books/children5.jpg", description: "Një gjeni kriminel 12-vjeçar përballet me një botë sekrete të elfeve." },
   { id: 24, title: "The Chronicles of Narnia vol. 1", author: "C.S. Lewis", category: "children", image: "images/books/children6.jpg", description: "Katër fëmijë zbulojnë një botë magjike përmes një gardërobe." },
+  { id: 41,
+    title: "Përrallat e Andersenit", category: "children",
+    author: "Hans Christian Andersen", image: "images/books/children7.jpg", price: "900 ALL", rating: 4.8,
+    description: "Nje koleksion i perrallave me te famshme ne bote. Keto te autorit H. K. Andersen."
+},
+  { id: 42, title: "Peter Pan", author: "J.M. Barrie", image: "images/books/children8.jpg",
+    price: "1,000 ALL", rating: 4.7, category: "children",
+    description: "Second to the right ...and then straight on till morning!' Desperate to hear bedtime stories, Peter Pan waits outside the nursery window of Wendy, John and Michael Darling. "
+},
 
   { id: 7, title: "A Brief History of Time", author: "Stephen Hawking", category: "science", image: "images/books/science1.jpg", description: "Një udhërrëfyes për universin që shpjegon konceptet komplekse të kozmologjisë." },
   { id: 8, title: "The Selfish Gene", author: "Richard Dawkins", category: "science", image: "images/books/science2.jpg", description: "Një teori që shpjegon evoluimin përmes perspektivës së gjeneve." },
