@@ -78,9 +78,9 @@
                     { id: 34, title: "CELESTIAL PLANISPHERE (EARLY CARTOGRAPHY) 1000 PIECE JIGSAW PUZZLE", author: "Paperblanks", image: "images/books/gift4.jpg", price: "2,200 ALL", rating: 4.8 },
                     { id: 35, title: "ALICE ASLEEP FROM ALICE‘S ADVENTURES IN WONDERLAND BOOKMARKS", author: "Flame Tree Publishing", image: "images/books/gift5.jpg", price: "500 ALL", rating: 4.9 },
                     { id: 36, title: "AIMEE STEWART: VINTAGE COOK BOOK LIBRARY (FOILED JOURNAL)", author: "Flame Tree Publishing", image: "images/books/gift6.jpg", price: "1,400 ALL", rating: 4.7 },
-                    { id: 37, title: "PRIDE AND PREJUDICE TOTE BAG", author: "Papercut", image: "images/books/gift7.jpg", price: "1,300 ALL", rating: 4.8
+                    { id: 37, title: "PRIDE AND PREJUDICE TOTE BAG", author: "Papercut", image: "images/books/gift7.png", price: "1,300 ALL", rating: 4.8
                     },
-                    { id: 38, title: "AGATHA CHRISTIE TRIVIA: 300 KILLER QUESTIONS ON THE QUEEN OF CRIME", author: "Orange Hippo!", image: "images/books/gift8.jpg", price: "1,500 ALL", rating: 4.9
+                    { id: 38, title: "AGATHA CHRISTIE TRIVIA: 300 KILLER QUESTIONS ON THE QUEEN OF CRIME", author: "Orange Hippo!", image: "images/books/gift8.png", price: "1,500 ALL", rating: 4.9
                     }
 
                 ]
