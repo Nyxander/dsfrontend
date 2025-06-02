@@ -40,24 +40,6 @@
     padding: 4rem 2rem 3rem 2rem;
     gap: 10rem;
 }
-.cta-btn {
-    background: #fff;
-    color: #2d3e50;
-    padding: 0.8rem 2.2rem;
-    border: none;
-    border-radius: 2rem;
-    font-size: 1.1rem;
-    font-weight: 600;
-    text-decoration: none;
-    transition: background 0.2s, color 0.2s;
-    cursor: pointer;
-    margin-bottom: 1.2rem;
-    display: inline-block;
-}
-.cta-btn:hover {
-    background: #c97c67;
-    color: #fff;
-}
 
 .quote {
     color: #fff;
@@ -153,22 +135,6 @@
 .visit-store-info p {
     font-size: 1.1rem;
     margin-bottom: 1.5rem;
-}
-.map-btn {
-    background: #fff;
-    color: #c98169;
-    padding: 0.7rem 2rem;
-    border: none;
-    border-radius: 2rem;
-    font-size: 1rem;
-    font-weight: 600;
-    text-decoration: none;
-    transition: background 0.2s, color 0.2s;
-    cursor: pointer;
-}
-.map-btn:hover {
-    background: #e6f0ec;
-    color: #c97c67;
 }
 
 .contact-section {
@@ -290,10 +256,9 @@ footer {
 
 
 .gilter{
-    border:1px solid rgba(#fff, 0.3); 
-    background-color: 1px solid rgba(#fff, 0.1);
+    border:1px solid rgba(255, 176, 146, 0.3);
     background: none !important;
-    box-shadow: 0px 2px 2px #fff inset, -2px 2px 2px #fff inset!important ;
+    box-shadow: 0 2px 2px #fff inset, -2px 2px 2px #fff inset!important ;
     border-radius: 5px;
     padding: 5px;
     color: #fff;
@@ -310,7 +275,7 @@ footer {
     position: relative;
     background-color: transparent;
     cursor: pointer;
-    border: 2px solid #252525;
+    border: 2px solid #fdadad;
     overflow: hidden;
     border-radius: 30px;
     color: var(--background-d);
@@ -338,8 +303,8 @@ footer {
   }
   
   .button:hover {
-    box-shadow: 1px 1px 50px #252525;
-    color: #a8a8a8;
+    box-shadow: 1px 1px 50px var(--peach);
+    color: var(--mint);
     border: none;
   }
   

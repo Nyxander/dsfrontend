@@ -189,4 +189,20 @@
         width: 100%;
         justify-content: center;
     }
-} 
+}
+
+ .product-image {
+     transition: transform 0.3s ease;
+     width: 100%;
+     max-width: 400px;
+ }
+
+.product-image:hover {
+    transform: scale(1.2);
+    cursor: zoom-in;
+}
+
+.image-container {
+    overflow: hidden;
+    display: inline-block;
+}
