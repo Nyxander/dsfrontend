@@ -6,8 +6,11 @@ const sampleBooks =
   { id: 14, title: "Zonja Bovari", author: "Gustave Flaubert", category: "classic", image: "images/books/classic4.png", description: "Historia tragjike e Emës, një grua që kërkon dashuri dhe kuptim përtej jetës së saj të zakonshme." },
   { id: 15, title: "Krenari dhe paragjykim", author: "Jane Austen", category: "classic", image: "images/books/classic5.png", description: "Një roman i njohur për humorin dhe vëzhgimin e hollë të shoqërisë angleze." },
   { id: 16, title: "Uliksi", author: "James Joyce", category: "classic", image: "images/books/classic6.png", description: "Një kryevepër moderniste që ndjek një ditë në jetën e Leopold Bloom në Dublin." },
+  { id: 37, title: "Vëllezërit Karamazov vol. 1", author: "Fyodor Dostoevsky", category:"classic", image: "images/books/classic7.png", price: "1,400 ALL", rating: 5.0, description: "Nëse do të mëkatosh vetë dhe do të pikëllohesh deri në vdekje për mëkatet e tua apo për ndonjë mëkat të rastësishëm, atëherë gëzohu për tjetrin, gëzohu për të drejtin, për atë ..." },
+  { id: 38, title: "In Search Of Lost Time Volume 1 - The Way By Swann's", category:"classic",  author: "Marcel Proust", image: "images/books/classic8.png", price: "1,200 ALL", rating: 4.7, description: "One of the greatest, most entertaining reading experiences in any language, Marcel Proust's In Search of Lost Time Vol. 1: The Way by Swann's is published in a new translation from the French by Lydia ..." },
 
-  { id: 3, title: "1984", author: "George Orwell", category: "modern", image: "images/books/modern1.jpg", description: "Një distopi e shkruar në vitin 1949, që përshkruan një shoqëri të kontrolluar nga një regjim totalitar." },
+
+{ id: 3, title: "1984", author: "George Orwell", category: "modern", image: "images/books/modern1.jpg", description: "Një distopi e shkruar në vitin 1949, që përshkruan një shoqëri të kontrolluar nga një regjim totalitar." },
   { id: 4, title: "Getsbi i Madh", author: "F. Scott Fitzgerald", category: "modern", image: "images/books/modern2.jpg", description: "Një roman për ëndrrën amerikane, dashurinë dhe humbjen në vitet 1920." },
   { id: 17, title: "Njëqind Vjet Vetmi", author: "Gabriel García Márquez", category: "modern", image: "images/books/modern3.jpg", description: "Saga magjike e familjes Buendía në qytetin imagjinar të Macondo." },
   { id: 18, title: "Lolita", author: "Vladimir Nabokov", category: "modern", image: "images/books/modern4.jpg", description: "Një thriller psikologjik rreth imoralitetit, obsesionit dhe abuzimit seksual." },

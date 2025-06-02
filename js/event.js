@@ -10,7 +10,7 @@ const events = {
 
     2:{
         id: 2,
-        emri: "FLASIM ME...",
+        emri: "FLASIM ME... VIKTOR CANOSINAJ",
         bashkepunetor: "VIKTOR CANOSINAJ",
         data: "10 Prill, 2024 - 17:00",
         description: "Shkrimtari i mirënjohur Viktor Canosinaj na bashkohet në një bisedë rreth veprës së tij të fundit."

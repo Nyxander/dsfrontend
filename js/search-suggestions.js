@@ -26,7 +26,10 @@ const bookTitles = [
   "ON THE ORIGIN OF TIME",
   "The Da Vinci Code",
   "The Handmaid's Tale",
-  "The Kite Runner"
+  "The Kite Runner",
+  "Vellezerit Karamazov vol. 1",
+  "In Search Of Lost Time Volume 1 - The Way By Swann's"
+
 ];
 
 document.addEventListener('DOMContentLoaded', () => {

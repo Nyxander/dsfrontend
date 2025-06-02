@@ -8,7 +8,9 @@
                     { id: 13, title: "Krim dhe Ndëshkm", author: "Fyodor Dostoevsky", image: "images/books/classic3.png", price: "1,300 ALL", rating: 4.9 },
                     { id: 14, title: "Zonja Bovari", author: "Gustave Flaubert", image: "images/books/classic4.png", price: "1,400 ALL", rating: 4.6 },
                     { id: 15, title: "Krenari dhe paragjykim", author: "Jane Austen", image: "images/books/classic5.png", price: "1,100 ALL", rating: 4.9 },
-                    { id: 16, title: "Uliksi", author: "James Joyce", image: "images/books/classic6.png", price: "1,600 ALL", rating: 4.5 }
+                    { id: 16, title: "Uliksi", author: "James Joyce", image: "images/books/classic6.png", price: "1,600 ALL", rating: 4.5 },
+                    { id: 37, title: "Vëllezërit Karamazov vol. 1", author: "Fyodor Dostoevsky", image: "images/books/classic7.png", price: "1,400 ALL", rating: 5.0 },
+                    { id: 38, title: "In Search Of Lost Time Volume 1 - The Way By Swann's", author: "Marcel Proust", image: "images/books/classic8.png", price: "1,200 ALL", rating: 4.7 }
                 ]
             },
             modern: {
