@@ -61,8 +61,8 @@ const sampleBooks =
   { id: 9, title: "The Da Vinci Code", author: "Dan Brown", category: "bestseller", image: "images/books/best1.jpg", description: "Një thriller plot mistere për një sekret të fshehur nga Kisha Katolike." },
   { id: 10, title: "The Handmaid's Tale", author: "Margaret Atwood", category: "bestseller", image: "images/books/best2.jpg", description: "Një tregim distopik për një shoqëri ku gratë trajtohen si pronë." },
   { id: 29, title: "The Kite Runner", author: "Khaled Hosseini", category: "bestseller", image: "images/books/best3.jpg", description: "Një histori prekëse për miqësinë, fajin dhe faljen në Afganistan." },
-  { id: 45, title: "Where the Crawdads Sing", author: "Delia Owens", image: "images/books/best7.jpg",  price: "1,700 ALL", rating: 4.9, category: "bestseller", description: "Where the Crawdads Sing is a 2018 coming-of-age murder mystery novel by American zoologist Delia Owens. The story follows two timelines that slowly intertwine. The first timeline describes the life and adventures of a young girl named Kya as she grows up isolated in the marshes of North Carolina."},
-  { id: 46, title: "Twisted Hate", author: "Ana Huang", image: "images/books/best8.jpg", price: "1,400 ALL", rating: 4.9
+  { id: 45, title: "Where the Crawdads Sing", author: "Delia Owens", image: "images/books/best7.png",  price: "1,700 ALL", rating: 4.9, category: "bestseller", description: "Where the Crawdads Sing is a 2018 coming-of-age murder mystery novel by American zoologist Delia Owens. The story follows two timelines that slowly intertwine. The first timeline describes the life and adventures of a young girl named Kya as she grows up isolated in the marshes of North Carolina."},
+  { id: 46, title: "Twisted Hate", author: "Ana Huang", image: "images/books/best8.png", price: "1,400 ALL", rating: 4.9
     , category: "bestseller", description: "Discover the addictive world of the Twisted series from TikTok sensation, Ana Huang!Read Twisted Hate now for a steamy enemies to lovers romance. "
 }
 
