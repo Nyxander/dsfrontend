@@ -35,8 +35,13 @@ const events = {
         data: "1 Mars, 2024",
         bashkepunetor: "Profesor nga Departi Letersise, Fakulteti i Filologjise.",
         description: "Workshop praktik për të gjithë ata që duan të zhvillojnë aftësitë e tyre në shkrim.",
-        status: 0
-        img : {}
+        status: 0,
+                imgs: [
+            "images/events/workshop-shkrimit-1.jpg",
+            "images/events/workshop-shkrimit-2.jpg",
+            "images/events/workshop-shkrimit-3.jpg"
+        ]
+    
 
     },
     5: {
@@ -45,7 +50,13 @@ const events = {
         data: "15 Mars, 2024",
         bashkepunetor: "Te apasionuar ndaj poezise",
         description: "Një mbrëmje e veçantë me poetët tanë të preferuar dhe lexime nga veprat e tyre.",
-        status: 0
+        status: 0,
+        imgs: [
+            "images/events/nata-poezise-1.jpg",
+            "images/events/nata-poezise-2.jpg",
+            "images/events/nata-poezise-3.jpg",
+            "images/events/nata-poezise-4.jpg"      
+        ]
     }
 
 }
@@ -74,14 +85,20 @@ function loadEventDetails() {
         document.title = `${event.emri} - Library`;
         document.getElementById('eventType').value = event.emri;
 
-    } else{
+      } else{
         document.querySelector('.event-detail-content').innerHTML = `
             <div class="container text-center py-5">
-                <h2>Eventi nuk u gjet</h2>
-                <p>Ju lutemi kthehuni te <a href="./event.html/"></a> faqja e eventeve.</p>
+                <h2>${event.emri}</h2>
+                ${
+                    event.imgs
+                        ? event.imgs.map(src => `<img src="${src}" alt="${event.emri}" style="max-width: 400px; width: 100%; margin: 20px 0;">`).join('')
+                        : ''
+                }
+                <p><strong>Data:</strong> ${event.data}</p>
+                <p><strong>Bashkëpunëtor:</strong> ${event.bashkepunetor}</p>
+                <p>${event.description}</p>
             </div>
         `;
-
     }
 
 }
