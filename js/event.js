@@ -85,19 +85,28 @@ function loadEventDetails() {
         document.title = `${event.emri} - Library`;
         document.getElementById('eventType').value = event.emri;
 
-      } else{
+           } else{
         document.querySelector('.event-detail-content').innerHTML = `
-            <div class="container text-center py-5">
-                <h2>${event.emri}</h2>
+        
+        <div class="container text-center py-5">
+                <h1 style="color: #333; margin-bottom: 1.5rem; font-family: 'Fredericka the Great', cursive;">${event.emri}</h1>
+                <br>
                 ${
                     event.imgs
-                        ? event.imgs.map(src => `<img src="${src}" alt="${event.emri}" style="max-width: 400px; width: 100%; margin: 20px 0;">`).join('')
+                        ? `<div class="event-collage">
+                            ${event.imgs.map((src, i) => 
+                                `<img src="${src}" alt="${event.emri}" class="collage-img collage-img-${i % 4}">`
+                            ).join('')}
+                           </div>`
                         : ''
                 }
-                <p><strong>Data:</strong> ${event.data}</p>
-                <p><strong>Bashkëpunëtor:</strong> ${event.bashkepunetor}</p>
-                <p>${event.description}</p>
+
+            <div class="event-detail-c">
+                <p class="event-date"><strong>Data:</strong> ${event.data}</p>
+                <p class="event-partner"><strong>Bashkëpunëtor:</strong> ${event.bashkepunetor}</p>
+                <p class="event-description">${event.description}</p>
             </div>
+        </div>
         `;
     }
 
