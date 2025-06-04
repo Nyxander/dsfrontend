@@ -1,6 +1,8 @@
 .product-detail-container {
     padding: 2rem 0;
     min-height: calc(100vh - 300px);
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .breadcrumb {
@@ -19,6 +21,9 @@
 
 .product-detail-content {
     margin-top: 2rem;
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
 }
 
 .product-image-container {
@@ -26,6 +31,8 @@
     padding: 1rem;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex: 1 1 40%;
+    max-width: 400px;
 }
 
 .product-image {
@@ -37,6 +44,7 @@
 
 .product-info {
     padding: 1rem;
+    flex: 1 1 55%;
 }
 
 .product-title {
@@ -94,6 +102,7 @@
 .product-actions {
     display: flex;
     gap: 1rem;
+    margin-top: 1.5rem;
 }
 
 .reserve-btn,
@@ -102,6 +111,8 @@
     font-size: 1rem;
     align-items: center;
     gap: 0.5rem;
+    display: inline-flex;
+    justify-content: center;
 }
 
 .reserve-btn {
@@ -126,6 +137,7 @@
 
 .related-books {
     margin-top: 4rem;
+    padding: 0 1rem;
 }
 
 .related-books h2 {
@@ -133,6 +145,13 @@
     color: #333;
     margin-bottom: 2rem;
     font-family: 'Fredericka the Great', cursive;
+    text-align: center;
+}
+
+.related-books-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
 }
 
 .related-book-card {
@@ -141,7 +160,6 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease-in-out;
     overflow: hidden;
-    margin-bottom: 1.5rem;
 }
 
 .related-book-card:hover {
@@ -164,45 +182,232 @@
     font-weight: bold;
     margin-bottom: 0.5rem;
     color: #333;
+    text-align: center;
 }
 
 .related-book-author {
     color: #666;
     font-size: 0.9rem;
+    text-align: center;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1100px) {
+    .product-detail-container {
+        padding: 1.5rem 0;
+    }
+    
+    .product-detail-content {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    
     .product-image-container {
-        margin-bottom: 2rem;
+        max-width: 300px;
+        margin: 0 auto;
     }
+    
+     .product-image,
+     .image-container {
+        max-width: 300px;
+     }
+    
+    .product-info {
+        padding: 0 1rem;
+    }
+    
+    .related-books {
+        margin-top: 3rem;
+        padding: 0 0.8rem;
+    }
+    
+    .related-books-grid {
+        gap: 1rem;
+    }
+    
+    .related-book-image {
+        height: 180px;
+    }
+    
+    .related-book-info {
+        padding: 0.8rem;
+    }
+     .related-book-title {
+        font-size: 1rem;
+     }
+     .related-book-author {
+        font-size: 0.85rem;
+     }
+}
 
-    .product-title {
+@media (max-width: 700px) {
+    .product-detail-container {
+        padding: 1rem 0;
+    }
+    
+    .product-detail-content {
+        gap: 1rem;
+    }
+    
+    .product-image-container {
+        max-width: 250px;
+    }
+    
+     .product-image,
+     .image-container {
+        max-width: 250px;
+     }
+    
+    .product-info {
+        padding: 0 0.8rem;
+    }
+    
+     .product-title {
         font-size: 1.5rem;
-    }
-
+     }
+     .product-author {
+        font-size: 1rem;
+     }
+     
+     .product-description h3,
+     .product-details h3 {
+        font-size: 1.3rem;
+     }
+     
+     .product-description p,
+     .details-list li {
+        font-size: 0.95rem;
+     }
+    
     .product-actions {
         flex-direction: column;
+        gap: 0.8rem;
     }
-
+    
     .reserve-btn,
     .share-btn {
         width: 100%;
-        justify-content: center;
+        padding: 0.6rem 1rem;
+        font-size: 0.95rem;
     }
+    
+    .related-books {
+        margin-top: 2rem;
+        padding: 0 0.5rem;
+    }
+    
+    .related-books h2 {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .related-books-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 0.8rem;
+    }
+     .related-book-image {
+        height: 150px;
+    }
+     .related-book-info {
+        padding: 0.6rem;
+    }
+     .related-book-title {
+        font-size: 0.9rem;
+     }
+     .related-book-author {
+        font-size: 0.8rem;
+     }
 }
 
- .product-image {
+@media (max-width: 500px) {
+     .product-detail-container {
+        padding: 0.8rem 0;
+    }
+    
+     .product-detail-content {
+        gap: 0.8rem;
+    }
+    
+     .product-image-container {
+        max-width: 200px;
+    }
+    
+     .product-image,
+     .image-container {
+        max-width: 200px;
+     }
+    
+    .product-info {
+        padding: 0 0.5rem;
+    }
+    
+    .product-title {
+        font-size: 1.3rem;
+     }
+     .product-author {
+        font-size: 0.9rem;
+     }
+     
+     .product-description h3,
+     .product-details h3 {
+        font-size: 1.1rem;
+     }
+     
+     .product-description p,
+     .details-list li {
+        font-size: 0.9rem;
+     }
+    
+    .product-actions {
+        gap: 0.5rem;
+    }
+    
+     .reserve-btn,
+     .share-btn {
+        padding: 0.5rem 0.8rem;
+        font-size: 0.9rem;
+     }
+    
+    .related-books {
+        margin-top: 1.5rem;
+        padding: 0 0.2rem;
+    }
+    
+    .related-books h2 {
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+    }
+    
+    .related-books-grid {
+        gap: 0.5rem;
+    }
+     .related-book-image {
+        height: 120px;
+    }
+     .related-book-info {
+        padding: 0.5rem;
+    }
+     .related-book-title {
+        font-size: 0.85rem;
+     }
+     .related-book-author {
+        font-size: 0.75rem;
+     }
+}
+
+.product-image,
+ .image-container {
      transition: transform 0.3s ease;
      width: 100%;
      max-width: 400px;
+     display: block;
+     margin: 0 auto;
  }
 
 .product-image:hover {
-    transform: scale(1.2);
+    transform: scale(1.05);
     cursor: zoom-in;
 }
 
 .image-container {
     overflow: hidden;
-    display: inline-block;
 }

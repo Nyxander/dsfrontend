@@ -9,16 +9,18 @@ body {
 main {
   display: flex;
   justify-content: center;
-  margin-left: 1.5rem;
   background-color: var(--background);
+  padding: 0 1.5rem;
 }
 .content-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   max-width: 800px;
-  margin: 10% 0 10% 0;
+  margin: 10% auto 10% auto;
   min-height: 27vh;
+  width: 100%;
+  padding: 0 1rem;
 }
 .pagination {
   display: flex;
@@ -35,8 +37,10 @@ main {
   flex-direction: column;
   align-items: center;
   max-width: 70%;
-  margin: 0 0 10% 0;
+  margin: 0 auto 10% auto;
   min-height: 27vh;
+  width: 100%;
+  padding: 0 1rem;
 }
 .ch1 {
   font-family: var(--sub-heading-fonts);
@@ -117,73 +121,47 @@ main {
   padding: 4rem 2rem 3rem 2rem;
 }
 
-@media (max-width: 991.98px) {
-  .footer-content {
-    flex-direction: column !important;
-    align-items: center !important;
-    gap: 2rem;
-  }
-  .footer-logo,
-  .footer-text,
-  .footer-links {
-    width: 100%;
-    align-items: center;
-    margin-bottom: 1rem;
-  }
-  .footer-links {
-    flex-direction: row !important;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
-  }
-  .footer-links a {
-    font-size: 1rem;
-  }
-  .hero-bg {
-    font-size: 2rem;
-    min-height: 300px;
-    padding: 1rem 0.5rem;
-  }
-  .logo-title {
-    font-size: 2rem;
+@media (max-width: 1100px) {
+  main {
+    padding: 0 1rem;
   }
   .content-container,
   .content {
-    max-width: 98vw;
-    margin: 5% 0;
+    margin: 8% auto;
+    padding: 0 0.8rem;
+  }
+  .hero-bg {
+    min-height: 400px;
+    font-size: 50px;
   }
 }
 
 @media (max-width: 700px) {
-  .navbar {
-    flex-direction: column;
-    padding: 1rem 0.5rem 0 0.5rem;
-  }
-  .logo-title {
-    font-size: 1.5rem;
+  main {
+    padding: 0 0.8rem;
   }
   .hero-bg {
-    font-size: 1.2rem;
-    min-height: 180px;
+    font-size: 30px;
+    min-height: 300px;
+    padding: 1rem 0.5rem;
   }
-  .footer-links {
-    gap: 0.5rem;
+  .content-container,
+  .content {
+    margin: 5% auto;
+    padding: 0 0.5rem;
   }
 }
 
 @media (max-width: 500px) {
+  main {
+    padding: 0 0.5rem;
+  }
+  .hero-bg {
+    font-size: 20px;
+    min-height: 200px;
+    padding: 1rem 0.2rem;
+  }
   .hero-content {
-    padding: 1rem 0.2rem 1rem 0.2rem;
-  }
-  .section-title {
-    font-size: 1.1rem;
-  }
-  .footer-logo img,
-  .footer-text img {
-    height: 60px !important;
-    width: 60px !important;
-  }
-  .footer-links a {
-    font-size: 0.95rem;
+    padding: 2rem 1rem;
   }
 }

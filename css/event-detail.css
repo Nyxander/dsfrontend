@@ -1,4 +1,5 @@
-/* Collage styles */
+@import url(color.s.css);
+@import url(font.s.css);
 
 .event-detail-c {
     background: #fff7f0;
@@ -8,6 +9,7 @@
     margin: 2rem auto 2rem auto;
     max-width: 700px;
     text-align: left;
+    width: 100%;
 }
 
 .event-date {
@@ -37,6 +39,7 @@
     max-width: 600px;
     box-shadow: 0 2px 12px rgba(200,129,105,0.07);
     line-height: 1.7;
+    width: 100%;
 }
 
 .event-collage {
@@ -45,6 +48,7 @@
     justify-content: center;
     gap: 16px;
     margin-bottom: 24px;
+    padding: 0 1rem;
 }
 
 .collage-img {
@@ -62,3 +66,121 @@
 .collage-img-2 { transform: rotate(-1deg) scale(1.01);}
 .collage-img-3 { transform: rotate(3deg) scale(0.97);}
 .collage-img:hover { z-index: 2; transform: scale(1.08) rotate(0deg);}
+
+/* Responsive Design */
+@media (max-width: 1100px) {
+    .event-detail-c {
+        padding: 2rem 1.5rem;
+        margin: 1.5rem auto;
+        max-width: 600px;
+    }
+    
+    .event-date {
+        font-size: 1.15rem;
+    }
+    
+    .event-partner {
+        font-size: 1rem;
+    }
+    
+    .event-description {
+        font-size: 1.05rem;
+        padding: 0.8rem 1.2rem;
+        margin: 0 auto 1.2rem auto;
+        max-width: 500px;
+    }
+    
+    .event-collage {
+        gap: 12px;
+        padding: 0 0.8rem;
+    }
+    
+    .collage-img {
+        width: 20rem;
+        height: 16rem;
+    }
+    
+    /* Reset transforms on smaller screens to prevent awkward rotations */
+     .collage-img-0,
+     .collage-img-1,
+     .collage-img-2,
+     .collage-img-3 {
+         transform: none !important;
+     }
+     .collage-img:hover {
+         transform: scale(1.05) !important;
+     }
+}
+
+@media (max-width: 700px) {
+     .event-detail-c {
+        padding: 1.5rem 1rem;
+        margin: 1rem auto;
+        max-width: 500px;
+    }
+    
+    .event-date {
+        font-size: 1.1rem;
+    }
+    
+     .event-partner {
+        font-size: 0.95rem;
+    }
+    
+    .event-description {
+        font-size: 1rem;
+        padding: 0.7rem 1rem;
+        margin: 0 auto 1rem auto;
+        max-width: 400px;
+    }
+    
+    .event-collage {
+        gap: 10px;
+        padding: 0 0.5rem;
+    }
+    
+    .collage-img {
+        width: 100%; /* Full width images */
+        max-width: 300px; /* Limit max width */
+        height: 180px;
+    }
+    
+     .collage-img:hover {
+         transform: scale(1.03) !important;
+     }
+}
+
+@media (max-width: 500px) {
+    .event-detail-c {
+        padding: 1rem 0.8rem;
+        margin: 0.8rem auto;
+        border-radius: 15px;
+    }
+    
+    .event-date {
+        font-size: 1rem;
+    }
+    
+    .event-partner {
+        font-size: 0.9rem;
+    }
+    
+    .event-description {
+        font-size: 0.95rem;
+        padding: 0.5rem 0.8rem;
+        margin: 0 auto 0.8rem auto;
+    }
+    
+     .event-collage {
+        gap: 8px;
+        padding: 0 0.2rem;
+    }
+    
+     .collage-img {
+        height: 150px;
+    }
+    
+     .event-collage {
+        gap: 8px; /* Adjust gap */
+    }
+}

@@ -72,7 +72,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Hide suggestions when clicking outside
     document.addEventListener('click', (e) => {
         if (!searchBar.contains(e.target)) {
             suggestionsContainer.style.display = 'none';
@@ -80,7 +79,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// Function to select a suggestion
 function selectSuggestion(suggestion) {
     const searchInput = document.querySelector('.search-input');
     searchInput.value = suggestion;

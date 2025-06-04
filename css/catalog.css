@@ -1,22 +1,29 @@
-@import url('https://fonts.googleapis.com/css2?family=Faculteta+Glyphic:wght@700&display=swap');
-
 @import url(color.s.css);
 @import url(font.s.css);
+
 h1 { text-align: center; }
-        .catalogue { display: flex; flex-wrap: wrap; gap: 24px; justify-content: center; }
+        .catalogue { 
+            display: flex; 
+            flex-wrap: wrap; 
+            gap: 24px; 
+            justify-content: center; 
+            padding: 1rem; /* Add default padding */
+        }
         .book-card {
             background: #fff;
             border: 1px solid #ddd;
             border-radius: 8px;
-            width: 220px;
+            width: 220px; /* Keep fixed width for larger screens */
             padding: 16px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.05);
             display: flex;
             flex-direction: column;
             align-items: center;
+            text-align: center; /* Center text */
         }
         .book-cover {
-            width: 120px;
+            width: 100%; /* Make cover image take full width of card */
+            max-width: 120px; /* Limit max width */
             height: 180px;
             object-fit: cover;
             margin-bottom: 12px;
@@ -24,7 +31,7 @@ h1 { text-align: center; }
             background: #eee;
         }
         .book-title { font-size: 1.1em; font-weight: bold; margin-bottom: 6px; text-align: center; }
-        .book-author { color: #555; margin-bottom: 10px; font-size: 0.95em; }
+        .book-author { color: #555; margin-bottom: 10px; font-size: 0.95em; text-align: center; }
         .book-description { font-size: 0.92em; color: #333; text-align: center; }
 
 
@@ -35,7 +42,7 @@ h1 { text-align: center; }
     background: linear-gradient(rgba(30,30,30,0.6), rgba(30,30,30,0.6)), 
     url('../templates/images/bg-3.PNG') 
     center/cover no-repeat;
-    min-height: 80vh;
+    min-height: 80vh; /* Keep for larger screens */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -46,7 +53,9 @@ h1 { text-align: center; }
 .hero-content {
     z-index: 2;
     color: #fff;
-    padding: 4rem 2rem 3rem 2rem;
+    padding: 4rem 2rem 3rem 2rem; /* Keep for larger screens */
+    max-width: 800px; /* Limit width */
+    margin: 0 auto; /* Center content */
 }
 .cta-btn {
     background: #fff;
@@ -94,10 +103,11 @@ h1 { text-align: center; }
 }
 .categories-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid */
     gap: 2.5rem 2rem;
-    max-width: 950px;
+    max-width: 1200px; /* Match home.css max-width */
     margin: 0 auto;
+    padding: 0 1rem; /* Add padding */
 }
 .category-item {
     background: #fff;
@@ -136,7 +146,6 @@ h1 { text-align: center; }
     background: #e6f0ec;
     align-items: stretch;
     margin: 0;
-   
 }
 .contact-info {
     flex: 1;
@@ -145,9 +154,8 @@ h1 { text-align: center; }
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
-    padding: 3rem 2.5rem 3rem 15%;
-    
+    align-items: flex-start; /* Align left for larger screens */
+    padding: 3rem 2.5rem; /* Keep for larger screens */
 }
 .contact-info h2 {
     font-size: 2rem;
@@ -156,7 +164,7 @@ h1 { text-align: center; }
 }
 .contact-info p {
     font-size: 1.1rem;
-    margin-bottom: 1.1rem;
+    margin-bottom: 1.5rem;
 }
 .contact-img {
     flex: 1.2;
@@ -183,9 +191,31 @@ footer {
 }
 
 /* RESPONSIVE DESIGN */
+@media (max-width: 1275px) { /* Added 1275px breakpoint */
+     .categories-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        padding: 0 1.5rem;
+    }
+    .contact-section {
+        flex-direction: column; /* Stack contact section */
+    }
+    .contact-img {
+        min-height: 250px; /* Adjust image height */
+    }
+    .contact-info {
+        padding: 2rem 1.5rem; /* Adjust padding */
+        align-items: center; /* Center content */
+        text-align: center; /* Center text */
+    }
+}
+
 @media (max-width: 1100px) {
-    .categories-grid {
-        grid-template-columns: 1fr 1fr;
+    /* Existing rules for 1100px */
+     .categories-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        padding: 0 1.5rem;
     }
     .events-content {
         flex-direction: column;
@@ -204,31 +234,48 @@ footer {
         padding: 2rem 1.2rem;
     }
 }
+
 @media (max-width: 700px) {
-    .navbar {
+    /* Existing rules for 700px */
+     .navbar {
         flex-direction: column;
         padding: 1rem 0.5rem 0 0.5rem;
     }
     .categories-grid {
         grid-template-columns: 1fr;
+        max-width: 400px; /* Limit width for single column */
+        gap: 1.5rem;
     }
-    .visit-store-info, .contact-info {
+    .contact-info {
         padding: 1.2rem 0.5rem;
+        align-items: center; /* Ensure centering */
+        text-align: center; /* Ensure centering */
     }
     .logo-title {
         font-size: 2.2rem;
     }
-}
-@media (max-width: 500px) {
+    
+    /* Adjust hero section for 700px */
+    .hero-bg {
+        min-height: 40vh; /* Adjust height */
+    }
     .hero-content {
-        padding: 2rem 0.5rem 2rem 0.5rem;
+        padding: 2rem 1rem; /* Adjust padding */
+    }
+}
+
+@media (max-width: 500px) {
+    /* Existing rules for 500px */
+    .hero-content {
+        padding: 1.5rem 0.5rem; /* Further adjust padding */
     }
     .section-title {
-        font-size: 1.5rem;
+        font-size: 1.8rem; /* Adjust section title size */
     }
 }
 
 @media (max-width: 400px) {
+  /* Existing rules for 400px */
   .search-bar {
     flex-direction: column;
     align-items: stretch;
@@ -236,5 +283,16 @@ footer {
 
   .search-icon {
     width: 100%;
+  }
+  
+  /* Further adjust for very small screens */
+  .catalogue {
+      gap: 15px; /* Reduce gap */
+  }
+  .book-card {
+      width: 180px; /* Adjust card width */
+  }
+  .book-cover {
+      height: 150px; /* Adjust cover height */
   }
 }
