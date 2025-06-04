@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Faculteta+Glyphic:wght@700&display=swap');
-
 body {
     font-family: 'Segoe UI', Arial, sans-serif;
     margin: 0;
@@ -75,7 +73,7 @@ body {
     letter-spacing: 0.4rem;
     color: #fff;
     margin: 0;
-    /*font-weight: 700;*/
+
 }
 .logo-subtitle {
     color: #fff;
@@ -84,7 +82,9 @@ body {
     font-weight: 400;
 }
 
-
+.container-fluid{
+    padding-bottom: 1.25rem !important;
+}
 
 .search-bar {
   display: flex;
@@ -118,7 +118,7 @@ body {
   color: #c98169;
 }
 .search-icon {
-  flex-shrink: 0; /* Prevent button from shrinking */
+  flex-shrink: 0; 
   padding: 0.5rem 1rem;
   font-size: 1rem;
   cursor: pointer;
@@ -162,4 +162,64 @@ footer {
 
 .bi{
     color: #ad5132!important;   
+}
+
+@media (max-width: 1200) {
+
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem 1.2rem 0 1.2rem;
+  }
+  .nav-links {
+    gap: 0.2rem;
+    flex-direction: column;
+    width: 70%;
+    font-size: 1.2rem;
+    align-items: flex-start;
+    margin-top: 1rem;
+  }
+  .logo-title {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+  }
+  .search-bar {
+    max-width: 100%;
+    margin: 1rem 0 0 0;
+  }
+}
+
+@media (max-width: 900px) {
+  .navbar {
+    padding: 0.7rem 0.5rem 0 0.5rem;
+  }
+  .logo-title {
+    font-size: 1.5rem;
+  }
+  .nav-links {
+    gap: 0.7rem;
+    font-size: 1rem;
+  }
+  .search-bar {
+    padding: 3px 5px;
+  }
+}
+
+@media (max-width: 700px) {
+  .navbar {
+    padding: 0.3rem 0.2rem 0 0.2rem;
+  }
+  .logo-title {
+    font-size: 1.1rem;
+    letter-spacing: 0.1rem;
+  }
+  .nav-links {
+    gap: 0.3rem;
+    font-size: 0.95rem;
+  }
+  .search-bar {
+    padding: 1px 2px;
+    border-radius: 20px;
+  }
 }
