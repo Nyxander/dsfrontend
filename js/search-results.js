@@ -317,7 +317,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const urlParams = new URLSearchParams(window.location.search);
     const searchQuery = urlParams.get('q');
 
-    if (searchQuery) {
+    if (searchQuery!="") {
         document.getElementById('searchInput').value = searchQuery;
         performSearch();
     }

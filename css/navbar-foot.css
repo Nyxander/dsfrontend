@@ -79,12 +79,6 @@ body {
 }
 
 
-form{
-  display:flex!important;
-  align-items:center;
-  box-sizing:border-box;
-  width: 100%;
-}
 
 .search-bar {
   display: flex;
@@ -96,6 +90,14 @@ form{
   padding: 5px 10px;
   background-color: #fff;
   transition: box-shadow 0.3s ease;
+}
+
+
+.search-bar form{
+  display:flex!important;
+  align-items:center;
+  box-sizing:border-box;
+  width: 100%;
 }
 
 .search-bar:focus-within {
