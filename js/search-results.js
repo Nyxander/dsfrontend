@@ -320,9 +320,10 @@ document.addEventListener('DOMContentLoaded', () => {
     if (searchQuery!="") {
         document.getElementById('searchInput').value = searchQuery;
         performSearch();
+    }else{
+            window.history.back();
     }
 
-    // Add event listeners for filters
     document.getElementById('categoryFilter').addEventListener('change', performSearch);
     document.getElementById('sortFilter').addEventListener('change', performSearch);
 });
