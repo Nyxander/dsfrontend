@@ -5,6 +5,11 @@
     margin: 0 auto;
 }
 
+.card a{
+    text-decoration: none;
+    color: var(--kafe);
+}
+
 .search-header {
     margin-bottom: 2rem;
     text-align: center;

@@ -5,7 +5,7 @@
     background: #fff;
     border-radius: 10px;
     overflow: hidden;
-    width: 220px;
+    width: 250px;
 }
 
 .card:hover {
@@ -26,6 +26,11 @@
 .card-body {
     padding: 1.25rem;
     background: #fff;
+}
+
+.card a {
+    text-decoration:none;
+    color: inherit;
 }
 
 .card-title {

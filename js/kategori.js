@@ -465,20 +465,19 @@ function displayBooks() {
             bookCard.className = 'col-md-3 mb-4';
             bookCard.innerHTML = `
                 <div class="card h-100">
-                    <img src="${book.image}" class="card-img-top" alt="${book.title}">
-                    <div class="card-body">
-                        <h5 class="card-title">${book.title}</h5>
-                        <p class="card-text">${book.author}</p>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <span class="price">${book.price}</span>
-                            <div class="rating">
-                                ${generateStarRating(book.rating)}
+                    <a href="./product-detail.html?id=${book.id}" class="text-decoration-none">
+                        <img src="${book.image}" class="card-img-top" alt="${book.title}">
+                        <div class="card-body">
+                            <h5 class="card-title">${book.title}</h5>
+                            <p class="card-text">${book.author}</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="price">${book.price}</span>
+                                <div class="rating">
+                                    ${generateStarRating(book.rating)}
+                                </div>
                             </div>
                         </div>
-                        <button class="btn btn-primary mt-3 w-100" onclick="addToCart(${book.id})">
-                            Shto në Shportë
-                        </button>
-                    </div>
+                    </a>
                 </div>
             `;
             booksContainer.appendChild(bookCard);
@@ -510,7 +509,6 @@ function addToCart(bookId) {
         // Save updated cart
         localStorage.setItem('cart', JSON.stringify(cart));
         
-        // Show success message
         let toastContainer = document.querySelector('.toast-container');
         if (!toastContainer) {
             toastContainer = document.createElement('div');
@@ -548,6 +546,5 @@ function addToCart(bookId) {
     }
 }
 
-// Initialize the page
 document.addEventListener('DOMContentLoaded', displayBooks);
     
