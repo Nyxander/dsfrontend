@@ -378,22 +378,17 @@ let currentPage = 1;
 const itemsPerPage = 12;
 let currentResults = [];
 
-// Initialize search when page loads
 document.addEventListener('DOMContentLoaded', function() {
-    // Get search query from URL
     const urlParams = new URLSearchParams(window.location.search);
     const searchQuery = urlParams.get('q');
     
-    // Set the search input value
     const searchInput = document.querySelector('input[name="q"]');
     if (searchInput) {
         searchInput.value = searchQuery || '';
     }
     
-    // Perform initial search
     performSearch();
     
-    // Add event listeners for filters
     const categoryFilter = document.getElementById('categoryFilter');
     const sortFilter = document.getElementById('sortFilter');
     
@@ -455,9 +450,8 @@ function displayResults(books) {
     let html = '<div class="row">';
     books.forEach(book => {
         html += `
-            <div>
-                <div class="card h-100">
-                    <img src="${book.image}" class="card-img-top" alt="${book.title}" style="height: 300px; object-fit: cover;">
+            <div class="col-md-4 mb-4">
+                    <a href="./book-details.html?id=${book.id}"> <img src="${book.image}" class="card-img-top" alt="${book.title}" style="height: 300px; object-fit: cover;"></a>
                     <div class="card-body">
                         <h5 class="card-title">${book.title}</h5>
                         <p class="card-text">${book.author}</p>
@@ -467,7 +461,6 @@ function displayResults(books) {
                                 Shto në Shportë
                             </button>
                         </div>
-                    </div>
                 </div>
             </div>
         `;
