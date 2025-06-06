@@ -104,7 +104,7 @@ body {
   align-items: center;
   max-width: 350px;
   margin: 1rem auto 0 1.5rem;
-  border: 2px solid #ccc;
+  border: none!important;
   border-radius: 40px;
   padding: 5px 10px;
   background-color: #fff;
@@ -133,6 +133,15 @@ body {
   font-size: 1rem;
   border-radius: 40px;
   background: transparent;
+}
+.form-control {
+    border: none; /* Shorthand to disable all borders */
+    /* OR */
+    border: 0;    /* Alternative (0 = no width → no border) */
+}
+.form-control:focus {
+    border-color: var(--kafe);        
+    box-shadow: 0 0 0 0.2rem white; 
 }
 .search-icon {
   border: none;
