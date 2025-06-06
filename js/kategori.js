@@ -462,23 +462,21 @@ function displayBooks() {
 
         category.books.forEach(book => {
             const bookCard = document.createElement('div');
-            bookCard.className = 'col-md-3 mb-4';
+            bookCard.className = 'book-card';
             bookCard.innerHTML = `
-                <div class="card h-100">
-                    <a href="./product-detail.html?id=${book.id}" class="text-decoration-none">
-                        <img src="${book.image}" class="card-img-top" alt="${book.title}">
-                        <div class="card-body">
-                            <h5 class="card-title">${book.title}</h5>
-                            <p class="card-text">${book.author}</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <span class="price">${book.price}</span>
-                                <div class="rating">
-                                    ${generateStarRating(book.rating)}
-                                </div>
+                <a href="./product-detail.html?id=${book.id}" class="text-decoration-none">
+                    <img src="${book.image}" class="book-cover" alt="${book.title}">
+                    <div class="book-info">
+                        <h5 class="book-title">${book.title}</h5>
+                        <p class="book-author">${book.author}</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="price">${book.price}</span>
+                            <div class="rating">
+                                ${generateStarRating(book.rating)}
                             </div>
                         </div>
-                    </a>
-                </div>
+                    </div>
+                </a>
             `;
             booksContainer.appendChild(bookCard);
         });

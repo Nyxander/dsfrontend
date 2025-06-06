@@ -40,7 +40,7 @@
 
 .search-results {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 2rem;
     margin-bottom: 2rem;
     padding: 0 1rem;
@@ -53,6 +53,9 @@
     transition: transform 0.2s ease-in-out;
     overflow: hidden;
     text-align: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .book-card:hover {
@@ -68,6 +71,9 @@
 
 .book-info {
     padding: 1rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .book-title {
@@ -75,6 +81,7 @@
     font-weight: bold;
     margin-bottom: 0.5rem;
     color: #333;
+    line-height: 1.4;
 }
 
 .book-author {
@@ -90,6 +97,7 @@
     border-radius: 4px;
     font-size: 0.9rem;
     color: #666;
+    margin-top: auto;
 }
 
 .pagination-container {
@@ -140,6 +148,7 @@
     }
     
     .search-results {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
         gap: 1.5rem;
         padding: 0 0.8rem;
     }
@@ -179,8 +188,8 @@
     }
 
     .search-results {
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-        gap: 1rem;
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        gap: 1.2rem;
         padding: 0 0.5rem;
     }
     
@@ -194,15 +203,15 @@
     }
     
     .book-image {
-        height: 200px;
+        height: 220px;
     }
     
     .book-info {
-        padding: 0.6rem;
+        padding: 0.8rem;
     }
     
     .book-title {
-        font-size: 1rem;
+        font-size: 1.1rem;
     }
     
     .book-author {
@@ -234,8 +243,9 @@
     }
     
     .search-results {
-        gap: 0.8rem;
-        padding: 0 0.2rem;
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+        gap: 1rem;
+        padding: 0 0.5rem;
     }
     
      .book-card {
@@ -243,24 +253,27 @@
      }
     
     .book-image {
-        height: 180px;
+        height: 200px;
     }
     
      .book-info {
-        padding: 0.5rem;
+        padding: 0.6rem;
     }
     
      .book-title {
-        font-size: 0.95rem;
-     }
+        font-size: 1rem;
+        margin-bottom: 0.3rem;
+    }
     
      .book-author {
-        font-size: 0.75rem;
-     }
+        font-size: 0.8rem;
+        margin-bottom: 0.3rem;
+    }
      
      .book-category {
         font-size: 0.8rem;
-     }
+        padding: 0.2rem 0.4rem;
+    }
      
      .pagination-container {
         padding: 0 0.2rem;
