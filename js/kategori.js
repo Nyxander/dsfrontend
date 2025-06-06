@@ -387,7 +387,7 @@ const booksByCategory = {
             },
             {
                 id: 35,
-                title: "ALICE ASLEEP FROM ALICE‘S ADVENTURES IN WONDERLAND BOOKMARKS",
+                title: "ALICE ASLEEP FROM ALICE'S ADVENTURES IN WONDERLAND BOOKMARKS",
                 author: "Flame Tree Publishing",
                 image: "images/books/gift5.jpg",
                 price: "500 ALL",
@@ -453,95 +453,101 @@ function generateStarRating(rating) {
 function displayBooks() {
     const categoryId = getUrlParameter('id');
     const category = booksByCategory[categoryId];
-
-    if (!category) {
-        document.getElementById('categoryTitle').textContent = 'Kategoritë';
-        const booksContainer = document.getElementById('booksContainer');
-        booksContainer.innerHTML = `
-                    <div class="categories-grid">
-                        <div class="row">
-                            <div class="col-md-4 mb-4">
-                                <a href="./kategori.html?id=classic" class="category-item">
-                                    <img src="./images/class.jpg" alt="Letërsi Klasike">
-                                    <h3>LETËRSIA KLASIKE</h3>
-                                </a>
-                            </div>
-                            <div class="col-md-4 mb-4">
-                                <a href="./kategori.html?id=modern" class="category-item">
-                                    <img src="./images/moderne.jpg" alt="Romane Modern">
-                                    <h3>ROMANE MODERN</h3>
-                                </a>
-                            </div>
-                            <div class="col-md-4 mb-4">
-                                <a href="./kategori.html?id=children" class="category-item">
-                                    <img src="./images/teen.png" alt="Fëmijë & Adoleshentë">
-                                    <h3>FËMIJË & ADOLESHENTË</h3>
-                                </a>
-                            </div>
-                            <div class="col-md-4 mb-4">
-                                <a href="./kategori.html?id=science" class="category-item">
-                                    <img src="./images/sc.png" alt="Filozofi & Shkencë">
-                                    <h3>FILOZOFI & SHKENCË</h3>
-                                </a>
-                            </div>
-                            <div class="col-md-4 mb-4">
-                                <a href="./kategori.html?id=bestseller" class="category-item">
-                                    <img src="./images/best.png" alt="Bestseller">
-                                    <h3>BESTSELLER</h3>
-                                </a>
-                            </div>
-                            <div class="col-md-4 mb-4">
-                                <a href="./kategori.html?id=gifts" class="category-item">
-                                    <img src="./images/gifts.PNG" alt="Dhurata të Sugjeruara">
-                                    <h3>DHURATA TË SUGJERUARA</h3>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                `;
-        return;
-    }
-
-    document.getElementById('categoryTitle').textContent = category.title;
     const booksContainer = document.getElementById('booksContainer');
-    booksContainer.innerHTML = '';
+    const categoryTitle = document.getElementById('categoryTitle');
 
-    category.books.forEach(book => {
-        const bookElement = document.createElement('div');
-        bookElement.className = 'col-md-4 col-lg-3 mb-4';
-        bookElement.innerHTML = `
-                    <div class="card h-100">
-                        <div class="position-relative">
-                        <a href="../templates/product-detail.html?id=${book.id}">
-                            <img src="${book.image}" class="card-img-top img-thumbnail" alt="${book.title}">
-                        </a>
-                            <div class="position-absolute top-0 end-0 m-2">
-                                <span class="badge bg-primary">${book.price}</span>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">${book.title}</h5>
-                            <p class="card-text text-muted">${book.author}</p>
-                            <div class="d-flex align-items-center mb-2">
+    if (category) {
+        categoryTitle.textContent = category.title;
+        booksContainer.innerHTML = '';
+
+        category.books.forEach(book => {
+            const bookCard = document.createElement('div');
+            bookCard.className = 'col-md-3 mb-4';
+            bookCard.innerHTML = `
+                <div class="card h-100">
+                    <img src="${book.image}" class="card-img-top" alt="${book.title}">
+                    <div class="card-body">
+                        <h5 class="card-title">${book.title}</h5>
+                        <p class="card-text">${book.author}</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="price">${book.price}</span>
+                            <div class="rating">
                                 ${generateStarRating(book.rating)}
-                                <small class="text-muted ms-2">(${book.rating})</small>
-                            </div>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <a href="../templates/product-detail.html?id=${book.id}" class="btn btn-primary">Më shumë</a>
-                                <button class="btn btn-outline-primary" onclick="addToCart(${book.id})">
-                                    <i class="bi bi-cart-plus"></i>
-                                </button>
                             </div>
                         </div>
+                        <button class="btn btn-primary mt-3 w-100" onclick="addToCart(${book.id})">
+                            Shto në Shportë
+                        </button>
                     </div>
-                `;
-        booksContainer.appendChild(bookElement);
-    });
+                </div>
+            `;
+            booksContainer.appendChild(bookCard);
+        });
+    } else {
+        booksContainer.innerHTML = '<p class="text-center">Kategoria nuk u gjet.</p>';
+    }
 }
 
 function addToCart(bookId) {
-    alert('Libri u shtua në shportë!');
+    const categoryId = getUrlParameter('id');
+    const category = booksByCategory[categoryId];
+    const book = category.books.find(b => b.id === bookId);
+    
+    if (book) {
+        // Get existing cart or initialize empty array
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        
+        // Add book to cart with additional details
+        cart.push({
+            id: book.id,
+            title: book.title,
+            author: book.author,
+            image: book.image,
+            price: parseFloat(book.price.replace(' ALL', '').replace(',', '')),
+            quantity: 1
+        });
+        
+        // Save updated cart
+        localStorage.setItem('cart', JSON.stringify(cart));
+        
+        // Show success message
+        let toastContainer = document.querySelector('.toast-container');
+        if (!toastContainer) {
+            toastContainer = document.createElement('div');
+            toastContainer.className = 'toast-container position-fixed bottom-0 end-0 p-3';
+            toastContainer.style.zIndex = '11';
+            document.body.appendChild(toastContainer);
+        }
+
+        const toastEl = document.createElement('div');
+        toastEl.className = 'toast';
+        toastEl.setAttribute('role', 'alert');
+        toastEl.setAttribute('aria-live', 'assertive');
+        toastEl.setAttribute('aria-atomic', 'true');
+        
+        toastEl.innerHTML = `
+            <div class="toast-header bg-success text-white">
+                <strong class="me-auto">Sukses!</strong>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+                Libri u shtua në shportë!
+            </div>
+        `;
+
+        toastContainer.appendChild(toastEl);
+        const toast = new bootstrap.Toast(toastEl, {
+            autohide: true,
+            delay: 3000
+        });
+        toast.show();
+
+        toastEl.addEventListener('hidden.bs.toast', () => {
+            toastEl.remove();
+        });
+    }
 }
 
-window.onload = displayBooks;
+// Initialize the page
+document.addEventListener('DOMContentLoaded', displayBooks);
     

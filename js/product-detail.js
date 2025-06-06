@@ -205,13 +205,13 @@ const books = {
     39: {
         id: 39, title: "Veronika vendos të vdesë", author: "Paulo Coelho",
         category: "modern",
-        image: "images/books/modern7.jpg", price: "1,100 ALL", rating: 4.6,
+        image: "images/books/modern7.png", price: "1,100 ALL", rating: 4.6,
         description: "“Një libër shumë origjinal, prekës dhe, në fund të fundit, inkurajues.”"
     },
     40: {
         id: 40, title: "Kafka në breg", author: "Haruki Murakami",
         category: "modern",
-        image: "images/books/modern8.jpg",
+        image: "images/books/modern8.png",
         price: "1,600 ALL", rating: 4.9,
         description: "Kafka Tamura, një i ri pesëmbëdhjetëvjeçar, largohet nga shtëpia me dëshirën edhe t'i shmanget profecisë edipiane të të atit, edhe të kërkojë motrën dhe nënën e tij të humbur prej kohesh."
     },
