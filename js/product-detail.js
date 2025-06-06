@@ -739,41 +739,34 @@ document.addEventListener('DOMContentLoaded', () => {
         const priceString = book.price.replace(' ALL', '').replace(/,/g, '');
         const priceNumber = parseFloat(priceString);
         
-        // Add book to cart with quantity and numeric price
-        const bookWithQuantity = {
-            ...book,
-            price: priceNumber,
-            quantity: 1
-        };
-        cart.push(bookWithQuantity);
+        // Check if book already exists in cart
+        const existingBookIndex = cart.findIndex(item => item.id === book.id);
+        
+        if (existingBookIndex !== -1) {
+            // If book exists, increment quantity
+            cart[existingBookIndex].quantity += 1;
+        } else {
+            // If book doesn't exist, add new entry
+            const bookWithQuantity = {
+                ...book,
+                price: priceNumber,
+                quantity: 1
+            };
+            cart.push(bookWithQuantity);
+        }
+        
         localStorage.setItem('cart', JSON.stringify(cart));
         
-        // Update cart count
-        const cartCount = document.getElementById('cartCount');
-        cartCount.textContent = cart.length;
-        
-        // Create and show toast notification
-        const toastContainer = document.createElement('div');
-        toastContainer.className = 'toast-container position-fixed bottom-0 end-0 p-3';
-        toastContainer.innerHTML = `
-            <div class="toast align-items-center text-white bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true">
-                <div class="d-flex">
-                    <div class="toast-body">
-                        Libri "${book.title}" u shtua në shportë!
-                    </div>
-                    <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
-                </div>
-            </div>
-        `;
-        document.body.appendChild(toastContainer);
-        
-        const toast = new bootstrap.Toast(toastContainer.querySelector('.toast'));
-        toast.show();
-        
-        // Remove toast container after animation
-        toastContainer.querySelector('.toast').addEventListener('hidden.bs.toast', () => {
-            toastContainer.remove();
+        // Update cart count (sum of all quantities)
+        const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+        // Update all cart count elements
+        const cartCounts = document.querySelectorAll('.cart-count');
+        cartCounts.forEach(count => {
+            count.textContent = totalItems;
         });
+        
+        // Redirect to cart page
+        window.location.href = './cart.html';
     });
 
     document.querySelector('.share-btn').addEventListener('click', () => {

@@ -281,7 +281,7 @@ document.addEventListener('DOMContentLoaded', function() {
             cart[index].quantity = (cart[index].quantity || 1) + change;
             if (cart[index].quantity < 1) cart[index].quantity = 1;
             localStorage.setItem('cart', JSON.stringify(cart));
-            updateCartDisplay();
+            window.location.reload();
         }
     }
 
@@ -290,7 +290,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const cart = JSON.parse(localStorage.getItem('cart')) || [];
         cart.splice(index, 1);
         localStorage.setItem('cart', JSON.stringify(cart));
-        updateCartDisplay();
+        window.location.reload();
     }
 
     // Update cart display
@@ -347,3 +347,20 @@ document.addEventListener('DOMContentLoaded', function() {
         shippingElement.textContent = `${shipping.toFixed(2)} ALL`;
         totalElement.textContent = `${total.toFixed(2)} ALL`;
     }
+
+    // Update cart count in navigation
+    function updateCartCount() {
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+        const totalItems = cart.reduce((sum, item) => sum + (item.quantity || 1), 0);
+        const cartCounts = document.querySelectorAll('.cart-count');
+        cartCounts.forEach(count => {
+            count.textContent = totalItems;
+            count.style.display = totalItems > 0 ? 'block' : 'none';
+        });
+    }
+
+    // Initialize on page load
+    document.addEventListener('DOMContentLoaded', function() {
+        updateCartDisplay();
+        updateCartCount();
+    });

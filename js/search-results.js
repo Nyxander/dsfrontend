@@ -446,20 +446,18 @@ function displayResults(books) {
         return;
     }
     
-    let html = '<div class="row">';
+    let html = '<div class="search-results">';
     books.forEach(book => {
         html += `
-            <div class="col-md-4 mb-4">
-                <div class="card h-100">
-                    <a href="./product-detail.html?id=${book.id}" class="text-decoration-none">
-                        <img src="${book.image}" class="card-img-top" alt="${book.title}" style="height: 300px; object-fit: cover;">
-                        <div class="card-body">
-                            <h5 class="card-title">${book.title}</h5>
-                            <p class="card-text">${book.author}</p>
-                            <p class="card-text">${book.description.substring(0, 100)}...</p>
-                        </div>
-                    </a>
-                </div>
+            <div class="book-card">
+                <a href="./product-detail.html?id=${book.id}">
+                    <img src="${book.image}" class="book-image" alt="${book.title}">
+                    <div class="book-info">
+                        <h3 class="book-title">${book.title}</h3>
+                        <p class="book-author">${book.author}</p>
+                        <span class="book-category">${getCategoryName(book.category)}</span>
+                    </div>
+                </a>
             </div>
         `;
     });
