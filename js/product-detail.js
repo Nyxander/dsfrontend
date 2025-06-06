@@ -413,7 +413,7 @@ const books = {
     },
     43: {
         id: 43, title: "Astrophysics for People in a Hurry", category: "science", author: "Neil deGrasse Tyson",
-        image: "images/books/science7.jpg", price: "1,700 ALL", rating: 4.6,
+        image: "images/books/science7.png", price: "1,700 ALL", rating: 4.6,
         description: "What is the nature of space and time? How do we fit within the universe? How does the universe fit within us? There’s no better guide through these mind-expanding questions than acclaimed astrophysicist and best-selling author Neil deGrasse Tyson."
     },
     44: {
@@ -421,7 +421,7 @@ const books = {
         title: "The Gene: An Intimate History",
         category: "science",
         author: "Siddhartha Mukherjee",
-        image: "images/books/science8.jpg",
+        image: "images/books/science8.png",
         price: "2,200 ALL",
         rating: 4.8,
         description: "From the Pulitzer Prize-winning, bestselling author of The Emperor of All Maladies--a magnificent history of the gene and a response to the defining question of the future: What becomes of being human when we learn to \"read\" and \"write\" our own genetic information?\n"

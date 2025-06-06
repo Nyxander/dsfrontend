@@ -49,6 +49,8 @@ function addToCart(bookId) {
 
     toastEl.addEventListener('hidden.bs.toast', () => {
         toastEl.remove();
+        // Reload the page after the toast is hidden
+        window.location.reload();
     });
 }
 

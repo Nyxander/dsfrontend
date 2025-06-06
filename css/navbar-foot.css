@@ -341,3 +341,15 @@ footer {
     font-size: 0.75rem;
     display: none;
 }
+
+.btn-palette {
+    background-color: #c98169;
+    color: white;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-palette:hover {
+    background-color: #b06d5a;
+    color: white;
+}

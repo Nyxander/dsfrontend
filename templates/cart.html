@@ -114,17 +114,18 @@
                     </form>
                 </div>
                 <ul class="navbar-nav ms-auto nav-links">
-                    <li class="nav-item"><a class="nav-link" href="./home.html">HOME</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./about.html">RRETH NESH</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./contact.html">KONTAKT</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./catalog.html">KATALOG</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./event.html">EVENTE</a></li>
                     <li class="nav-item">
                         <a class="cart-icon" href="./cart.html">
                             <i class="bi bi-cart3"></i>
                             <span id="cartCount" class="cart-count">0</span>
                         </a>
                     </li>
+                    <li class="nav-item"><a class="nav-link" href="./home.html">HOME</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./about.html">RRETH NESH</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./contact.html">KONTAKT</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./catalog.html">KATALOG</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./event.html">EVENTE</a></li>
+                  
                 </ul>
             </div>
         </div>
@@ -179,6 +180,14 @@
                             <div class="d-flex justify-content-between mb-3">
                                 <strong>Totali:</strong>
                                 <strong id="total">0.00 ALL</strong>
+                            </div>
+                            <div class="mb-3">
+                                <label for="phoneNumber" class="form-label">Numri i telefonit:</label>
+                                <input type="tel" class="form-control" id="phoneNumber" 
+                                       placeholder="Shkruani numrin e telefonit" required
+                                       maxlength="10" pattern="[0-9]{10}"
+                                       oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+                                <small class="text-muted">Ju lutemi shkruani 10 numra</small>
                             </div>
                             <button class="checkout-btn w-100" id="checkoutBtn">
                                 Vazhdo me Porosinë
@@ -289,6 +298,8 @@
 
         // Handle checkout
         checkoutBtn.addEventListener('click', function() {
+            const phoneNumber = document.getElementById('phoneNumber').value.trim();
+            
             if (cart.length === 0) {
                 // Create toast container if it doesn't exist
                 let toastContainer = document.querySelector('.toast-container');
@@ -328,6 +339,84 @@
                 return;
             }
 
+            if (!phoneNumber) {
+                // Create toast container if it doesn't exist
+                let toastContainer = document.querySelector('.toast-container');
+                if (!toastContainer) {
+                    toastContainer = document.createElement('div');
+                    toastContainer.className = 'toast-container position-fixed bottom-0 end-0 p-3';
+                    toastContainer.style.zIndex = '11';
+                    document.body.appendChild(toastContainer);
+                }
+
+                const toastEl = document.createElement('div');
+                toastEl.className = 'toast';
+                toastEl.setAttribute('role', 'alert');
+                toastEl.setAttribute('aria-live', 'assertive');
+                toastEl.setAttribute('aria-atomic', 'true');
+                
+                toastEl.innerHTML = `
+                    <div class="toast-header bg-danger text-white">
+                        <strong class="me-auto">Gabim!</strong>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast" aria-label="Close"></button>
+                    </div>
+                    <div class="toast-body">
+                        Ju lutemi shkruani numrin e telefonit!
+                    </div>
+                `;
+
+                toastContainer.appendChild(toastEl);
+                const toast = new bootstrap.Toast(toastEl, {
+                    autohide: true,
+                    delay: 3000
+                });
+                toast.show();
+
+                toastEl.addEventListener('hidden.bs.toast', () => {
+                    toastEl.remove();
+                });
+                return;
+            }
+
+            if (phoneNumber.length !== 10) {
+                // Create toast container if it doesn't exist
+                let toastContainer = document.querySelector('.toast-container');
+                if (!toastContainer) {
+                    toastContainer = document.createElement('div');
+                    toastContainer.className = 'toast-container position-fixed bottom-0 end-0 p-3';
+                    toastContainer.style.zIndex = '11';
+                    document.body.appendChild(toastContainer);
+                }
+
+                const toastEl = document.createElement('div');
+                toastEl.className = 'toast';
+                toastEl.setAttribute('role', 'alert');
+                toastEl.setAttribute('aria-live', 'assertive');
+                toastEl.setAttribute('aria-atomic', 'true');
+                
+                toastEl.innerHTML = `
+                    <div class="toast-header bg-danger text-white">
+                        <strong class="me-auto">Gabim!</strong>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast" aria-label="Close"></button>
+                    </div>
+                    <div class="toast-body">
+                        Numri i telefonit duhet të ketë saktësisht 10 shifra!
+                    </div>
+                `;
+
+                toastContainer.appendChild(toastEl);
+                const toast = new bootstrap.Toast(toastEl, {
+                    autohide: true,
+                    delay: 3000
+                });
+                toast.show();
+
+                toastEl.addEventListener('hidden.bs.toast', () => {
+                    toastEl.remove();
+                });
+                return;
+            }
+
             // Create toast container if it doesn't exist
             let toastContainer = document.querySelector('.toast-container');
             if (!toastContainer) {
@@ -349,7 +438,7 @@
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast" aria-label="Close"></button>
                 </div>
                 <div class="toast-body">
-                    Faleminderit për porosinë! Do të ju kontaktojmë së shpejti.
+                    Faleminderit për porosinë! Do të ju kontaktojmë së shpejti në numrin ${phoneNumber}.
                 </div>
             `;
 

@@ -124,7 +124,7 @@ const booksByCategory = {
                 id: 39,
                 title: "Veronika vendos të vdesë",
                 author: "Paulo Coelho",
-                image: "images/books/modern7.jpg",
+                image: "images/books/modern7.png",
                 price: "1,100 ALL",
                 rating: 4.6
             },
@@ -132,7 +132,7 @@ const booksByCategory = {
                 id: 40,
                 title: "Kafka në breg",
                 author: "Haruki Murakami",
-                image: "images/books/modern8.jpg",
+                image: "images/books/modern8.png",
                 price: "1,600 ALL",
                 rating: 4.9
             }
@@ -265,7 +265,7 @@ const booksByCategory = {
                 id: 43,
                 title: "Astrophysics for People in a Hurry",
                 author: "Neil deGrasse Tyson",
-                image: "images/books/science7.jpg",
+                image: "images/books/science7.png",
                 price: "1,700 ALL",
                 rating: 4.6
             },
@@ -273,7 +273,7 @@ const booksByCategory = {
                 id: 44,
                 title: "The Gene: An Intimate History",
                 author: "Siddhartha Mukherjee",
-                image: "images/books/science8.jpg",
+                image: "images/books/science8.png",
                 price: "2,200 ALL",
                 rating: 4.8
             }

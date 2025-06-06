@@ -43,6 +43,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const searchInput = document.querySelector('.search-input');
     const searchBar = document.querySelector('.search-bar');
 
+    // Only initialize if both search input and search bar exist
+    if (!searchInput || !searchBar) {
+        console.log('Search elements not found, skipping search suggestions initialization');
+        return;
+    }
+
     const suggestionsContainer = document.createElement('div');
     suggestionsContainer.className = 'search-suggestions';
     searchBar.appendChild(suggestionsContainer);
