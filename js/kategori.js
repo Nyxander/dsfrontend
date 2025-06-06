@@ -493,10 +493,8 @@ function addToCart(bookId) {
     const book = category.books.find(b => b.id === bookId);
     
     if (book) {
-        // Get existing cart or initialize empty array
         let cart = JSON.parse(localStorage.getItem('cart')) || [];
         
-        // Add book to cart with additional details
         cart.push({
             id: book.id,
             title: book.title,
@@ -506,7 +504,6 @@ function addToCart(bookId) {
             quantity: 1
         });
         
-        // Save updated cart
         localStorage.setItem('cart', JSON.stringify(cart));
         
         let toastContainer = document.querySelector('.toast-container');

@@ -414,7 +414,7 @@ const books = {
     43: {
         id: 43, title: "Astrophysics for People in a Hurry", category: "science", author: "Neil deGrasse Tyson",
         image: "images/books/science7.png", price: "1,700 ALL", rating: 4.6,
-        description: "What is the nature of space and time? How do we fit within the universe? How does the universe fit within us? There’s no better guide through these mind-expanding questions than acclaimed astrophysicist and best-selling author Neil deGrasse Tyson."
+        description: "What is the nature of space and time? How do we fit within the universe? How does the universe fit within us? There's no better guide through these mind-expanding questions than acclaimed astrophysicist and best-selling author Neil deGrasse Tyson."
     },
     44: {
         id: 44,
@@ -570,7 +570,7 @@ const books = {
         image: "images/books/gift3.jpg",
         price: "1,300 ALL",
         rating: 4.7,
-        description: "Celebrate the elegance of Japanese art with this set of three mini notebooks featuring iconic woodblock prints. Compact and beautifully designed, they’re perfect for journaling, note-taking, or gifting to someone who appreciates traditional aesthetics."
+        description: "Celebrate the elegance of Japanese art with this set of three mini notebooks featuring iconic woodblock prints. Compact and beautifully designed, they're perfect for journaling, note-taking, or gifting to someone who appreciates traditional aesthetics."
     },
     34: {
         id: 34,
@@ -584,7 +584,7 @@ const books = {
     },
     35: {
         id: 35,
-        title: "ALICE ASLEEP FROM ALICE‘S ADVENTURES IN WONDERLAND BOOKMARKS",
+        title: "ALICE ASLEEP FROM ALICE'S ADVENTURES IN WONDERLAND BOOKMARKS",
         category: "gifts",
         author: "Flame Tree Publishing",
         image: "images/books/gift5.jpg",
@@ -600,7 +600,7 @@ const books = {
         image: "images/books/gift6.jpg",
         price: "1,400 ALL",
         rating: 4.7,
-        description: "Dive into a nostalgic world of culinary charm with this foiled journal designed by Aimee Stewart. Featuring a vintage cookbook library cover, it’s perfect for jotting recipes, ideas, or daily reflections, all within a beautifully crafted keepsake."
+        description: "Dive into a nostalgic world of culinary charm with this foiled journal designed by Aimee Stewart. Featuring a vintage cookbook library cover, it's perfect for jotting recipes, ideas, or daily reflections, all within a beautifully crafted keepsake."
     },
     47: {
         id: 47,
@@ -650,6 +650,7 @@ function loadBookDetails() {
              <li><strong>Gjuha:</strong> <span id="bookLanguage">-</span></li>
              <li><strong>Viti i Botimit:</strong> <span id="bookYear">-</span></li>
              <li><strong>Dimensionet:</strong> <span id="bookDimensions">-</span></li>
+
         `;
 
     } else {
@@ -662,6 +663,7 @@ function loadBookDetails() {
     document.getElementById('bookImage').alt = book.title;
     document.getElementById('bookAuthor').textContent = book.author;
     document.getElementById('bookCategory').textContent = getCategoryName(book.category);
+    document.getElementById('bookPrice').textContent = book.price;
     document.getElementById('bookDescription').textContent = book.description;
     document.getElementById('bookIsbn').textContent = book.isbn;
     document.getElementById('bookLanguage').textContent = book.language;
@@ -727,8 +729,51 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Add event listeners for buttons
     document.querySelector('.reserve-btn').addEventListener('click', () => {
-        // Handle reservation (to be implemented)
-        alert('Funksionaliteti i rezervimit do të implementohet së shpejti!');
+        const bookId = getBookIdFromUrl();
+        const book = books[parseInt(bookId)];
+        
+        // Get existing cart or initialize empty array
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        
+        // Convert price string to number (remove "ALL" and commas, then parse as float)
+        const priceString = book.price.replace(' ALL', '').replace(/,/g, '');
+        const priceNumber = parseFloat(priceString);
+        
+        // Add book to cart with quantity and numeric price
+        const bookWithQuantity = {
+            ...book,
+            price: priceNumber,
+            quantity: 1
+        };
+        cart.push(bookWithQuantity);
+        localStorage.setItem('cart', JSON.stringify(cart));
+        
+        // Update cart count
+        const cartCount = document.getElementById('cartCount');
+        cartCount.textContent = cart.length;
+        
+        // Create and show toast notification
+        const toastContainer = document.createElement('div');
+        toastContainer.className = 'toast-container position-fixed bottom-0 end-0 p-3';
+        toastContainer.innerHTML = `
+            <div class="toast align-items-center text-white bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="d-flex">
+                    <div class="toast-body">
+                        Libri "${book.title}" u shtua në shportë!
+                    </div>
+                    <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+            </div>
+        `;
+        document.body.appendChild(toastContainer);
+        
+        const toast = new bootstrap.Toast(toastContainer.querySelector('.toast'));
+        toast.show();
+        
+        // Remove toast container after animation
+        toastContainer.querySelector('.toast').addEventListener('hidden.bs.toast', () => {
+            toastContainer.remove();
+        });
     });
 
     document.querySelector('.share-btn').addEventListener('click', () => {

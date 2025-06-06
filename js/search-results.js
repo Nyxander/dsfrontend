@@ -535,9 +535,7 @@ function addToCart(bookId) {
 } 
 */
 function addToCart(bookId) {
-    const categoryId = getUrlParameter('id');
-    const category = booksByCategory[categoryId];
-    const book = category.books.find(b => b.id === bookId);
+    const book = sampleBooks.find(b => b.id === bookId);
     
     if (book) {
         let cart = JSON.parse(localStorage.getItem('cart')) || [];
@@ -551,7 +549,6 @@ function addToCart(bookId) {
             quantity: 1
         });
         
-        // Save updated cart
         localStorage.setItem('cart', JSON.stringify(cart));
         
         let toastContainer = document.querySelector('.toast-container');
