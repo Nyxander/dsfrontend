@@ -14,16 +14,16 @@
 
 .event-date {
     font-size: 1.25rem;
-    color: #a0522d;
-    font-family: 'Fraunces', serif;
+    color: var(--accent);
+    font-family: var(--quote-sub);
     margin-bottom: 0.5rem;
     letter-spacing: 0.5px;
 }
 
 .event-partner {
     font-size: 1.1rem;
-    color: #6d4c41;
-    font-family: 'Fraunces', serif;
+    color: var(--accent);
+    font-family: var(--quote-sub);
     margin-bottom: 1rem;
     font-style: italic;
 }
@@ -31,7 +31,7 @@
 .event-description {
     font-size: 1.15rem;
     color: #333;
-    font-family: 'Fredericka the Great', cursive;
+    font-family: var(--quote);
     background: #fff7f0;
     border-radius: 12px;
     padding: 1rem 1.5rem;
@@ -181,6 +181,6 @@
     }
     
      .event-collage {
-        gap: 8px; /* Adjust gap */
+        gap: 8px; 
     }
 }

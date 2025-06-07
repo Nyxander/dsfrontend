@@ -49,7 +49,7 @@ h1 { text-align: center; }
         }
         .price {
             font-weight: bold;
-            color: #c98169;
+            color: var(--kafe);
             margin-top: auto;
         }
         .rating {
@@ -71,9 +71,9 @@ h1 { text-align: center; }
 .hero-content {
     z-index: 2;
     color: #fff;
-    padding: 4rem 2rem 3rem 2rem; /* Keep for larger screens */
-    max-width: 800px; /* Limit width */
-    margin: 0 auto; /* Center content */
+    padding: 4rem 2rem 3rem 2rem; 
+    max-width: 800px; 
+    margin: 0 auto; 
 }
 .cta-btn {
     background: #fff;
@@ -90,7 +90,7 @@ h1 { text-align: center; }
     display: inline-block;
 }
 .cta-btn:hover {
-    background: #c97c67;
+    background: var(--hover);
     color: #fff;
 }
 .quote {
@@ -103,7 +103,7 @@ h1 { text-align: center; }
 }
 
 .categories-section {
-    background: #e6f0ec;
+    background: var(--background);
     padding: 3rem 0 2rem 0;
     text-align: center;
 }
@@ -121,11 +121,11 @@ h1 { text-align: center; }
 }
 .categories-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2.5rem 2rem;
-    max-width: 1200px; /* Match home.css max-width */
+    max-width: 1200px; 
     margin: 0 auto;
-    padding: 0 1rem; /* Add padding */
+    padding: 0 1rem; 
 }
 .category-item {
     background: #fff;
@@ -161,19 +161,19 @@ h1 { text-align: center; }
 .contact-section {
     display: flex;
     min-height: 320px;
-    background: #e6f0ec;
+    background: var(--background);
     align-items: stretch;
     margin: 0;
 }
 .contact-info {
     flex: 1;
-    background: #c98169;
+    background: var(--kafe);
     color: #fff;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start; /* Align left for larger screens */
-    padding: 3rem 2.5rem; /* Keep for larger screens */
+    align-items: flex-start; 
+    padding: 3rem 2.5rem; 
 }
 .contact-info h2 {
     font-size: 2rem;
@@ -196,7 +196,7 @@ h1 { text-align: center; }
     display: block;
 }
 
-/* FOOTER */
+
 footer {
     background: #222;
     color: #fff;
@@ -208,23 +208,22 @@ footer {
     margin-top: 0;
 }
 
-/* RESPONSIVE DESIGN */
-@media (max-width: 1275px) { /* Added 1275px breakpoint */
+@media (max-width: 1275px) { 
      .categories-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 2rem;
         padding: 0 1.5rem;
     }
     .contact-section {
-        flex-direction: column; /* Stack contact section */
+        flex-direction: column; 
     }
     .contact-img {
-        min-height: 250px; /* Adjust image height */
+        min-height: 250px; 
     }
     .contact-info {
-        padding: 2rem 1.5rem; /* Adjust padding */
-        align-items: center; /* Center content */
-        text-align: center; /* Center text */
+        padding: 2rem 1.5rem; 
+        align-items: center; 
+        text-align: center; 
     }
 }
 

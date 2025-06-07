@@ -28,9 +28,9 @@ main {
   margin-top: 1.5rem;
 }
 .pagination .active {
-  background-color: #c98169;
+  background-color:var(--kafe);
   color: #fff;
-  border-color: #c98169;
+  border-color:var(--kafe);
 }
 .content {
   display: flex;
@@ -64,7 +64,7 @@ main {
   &:link,
   &:visited {
     text-decoration: none;
-    color: #c98169 !important;
+    color:var(--kafe) !important;
   }
 }
 

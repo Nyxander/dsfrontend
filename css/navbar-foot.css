@@ -1,8 +1,11 @@
+@import url(color.s.css);
+@import url(font.s.css);
+
 body {
-    font-family: 'Segoe UI', Arial, sans-serif;
+    font-family: var(--body-fonts);
     margin: 0;
     padding: 0;
-    background: #e6f0ec;
+    background: var(--background);
     color: #222;
 
 }
@@ -11,7 +14,7 @@ body {
     position: relative;
     width: 100%;
     min-height: 150px;
-    background: #c98169;
+    background: var(--kafe);
     background: transparent;
 }
 
@@ -22,7 +25,7 @@ body {
     padding: 1.5rem 3rem 0 3rem;
     position: relative;
     z-index: 2;
-    background: #c98169;
+    background: var(--kafe);
 }
 .navbar-left {
     display: flex;
@@ -76,10 +79,10 @@ body {
     font-size: 1.2em;
 }
 .nav-links li a:hover {
-    color: #e0ebe5;
+    color: var(--background);
 }
 .logo-title {
-    font-family: 'Fredericka the Great', cursive;
+    font-family:  var(--quote);
     font-size: 3.5rem;
     letter-spacing: 0.4rem;
     color: #fff;
@@ -123,8 +126,9 @@ body {
 
 .search-bar:focus-within {
   box-shadow: 0 0 0 3px rgba(255, 238, 197, 0.3);
-  border-color: #fd9d80; 
+  border-color: var(--border)!important; 
 }
+
 .search-input {
   flex: 1;
   border: none!important;
@@ -135,9 +139,8 @@ body {
   background: transparent;
 }
 .form-control {
-    border: none; /* Shorthand to disable all borders */
-    /* OR */
-    border: 0;    /* Alternative (0 = no width → no border) */
+    border: none; 
+    border: 0;   
 }
 .form-control:focus {
     border-color: var(--kafe);        
@@ -147,7 +150,7 @@ body {
   border: none;
   padding: 10px 15px;
   border-radius: 50%;
-  color: #c98169;
+  color:var(--kafe);
   flex-shrink: 0; 
   padding: 0.5rem 1rem;
   font-size: 1rem;
@@ -155,7 +158,7 @@ body {
 }
 
 .line {
-  display: none; /* Hidden unless needed for decoration */
+  display: none; 
 }
 
 
@@ -192,7 +195,7 @@ footer {
       
 
 .bi{
-    color: #ad5132!important;   
+    color: var(--accent)!important;   
 }
 
 @media (max-width: 1500px) {
@@ -258,7 +261,7 @@ footer {
     }
 
     .navbar-collapse {
-        background: #c98169;
+        background:var(--kafe);
         padding: 1rem;
         border-radius: 0.5rem;
         margin-top: 1rem;
@@ -362,7 +365,7 @@ footer {
 }
 
 .btn-palette {
-    background-color: #c98169;
+    background-color:var(--kafe);
     color: white;
     border: none;
     transition: background-color 0.3s ease;

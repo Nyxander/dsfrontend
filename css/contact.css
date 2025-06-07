@@ -52,7 +52,7 @@
 }
 
 .categories-section {
-    background: #e6f0ec;
+    background: var(--background);
     padding: 3rem 0 2rem 0;
     text-align: center;
 }
@@ -103,7 +103,7 @@
 .visit-store-section {
     display: flex;
     min-height: 320px;
-    background: #e6f0ec;
+    background: var(--background);
     align-items: stretch;
     margin: 0;
 }
@@ -120,7 +120,7 @@
 }
 .visit-store-info {
     flex: 1;
-    background: #c98169;
+    background: var(--kafe);
     color: #fff;
     display: flex;
     flex-direction: column;
@@ -141,7 +141,7 @@
 .contact-section {
     display: flex;
     min-height: 320px;
-    background: #e6f0ec;
+    background: var(--background);
     align-items: stretch;
     margin: 0;
    
@@ -196,7 +196,7 @@ footer {
     box-shadow: 0 4px 24px rgba(44,62,80,0.10);
     display: flex;
     flex-direction: column;
-    max-width: 500px;
+    max-width: 600px;
     height: auto;
     width: 100%;
 }
@@ -213,7 +213,7 @@ footer {
     min-width: 0;
     border-radius: 8px;
     padding: 0.7rem 1rem;
-    border: 1px solid #c98169;
+    border: 1px solid var(--kafe);
     font-size: 1rem;
     background: #fff;
     color: #222;
@@ -224,7 +224,7 @@ footer {
     max-width: 600px;
     min-height: 100px;
     padding: 0.7rem 1rem;
-    border: 1px solid #c98169;
+    border: 1px solid var(--kafe);
     border-radius: 8px;
     font-size: 1rem;
     background: #fff;
@@ -240,7 +240,7 @@ footer {
     border-radius: 20px;
     padding: 0.7rem 2.2rem;
     font-size: 1.1rem;
-    background: #c98169;
+    background: var(--kafe);
     color: #fff;
     border: none;
     cursor: pointer;
@@ -249,7 +249,7 @@ footer {
 
 .hero-bg button:hover,
 .hero-bg .button:hover {
-    background: #a86a57;
+    background: var(--hover);
 }
 
 
@@ -273,7 +273,7 @@ footer {
     position: relative;
     background-color: transparent;
     cursor: pointer;
-    border: 2px solid #fdadad;
+    border: 2px solid var(--border);
     overflow: hidden;
     border-radius: 30px;
     color: var(--background-d);
@@ -313,7 +313,7 @@ footer {
 
 
 
-/* RESPONSIVE DESIGN */
+
 @media (max-width: 1100px) {
     .hero-bg {
         height: 70vh;

@@ -1,3 +1,6 @@
+@import url(color.s.css);
+@import url(font.s.css);
+
 .search-bar {
     position: relative;
 }
@@ -38,7 +41,6 @@
     font-size: 0.95rem;
 }
 
-/* Animation for suggestions */
 .search-suggestions {
     animation: fadeIn 0.2s ease-in-out;
 }

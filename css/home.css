@@ -42,7 +42,7 @@
     display: inline-block;
 }
 .cta-btn:hover {
-    background: #c97c67;
+    background: var(--hover);
     color: #fff;
 }
 .quote {
@@ -60,11 +60,11 @@
 }
 .categories-section a{
     text-decoration: none;
-    color: #c97c67;
+    color: var(--hover);
 }
 .section-title {
     font-size: 2.5rem;
-    font-family: 'Montserrat', Arial, sans-serif;
+    font-family: var(--body-fonts);
     font-weight: 700;
     margin: 0 0 2.5rem 2.5rem;
     color: #222;
@@ -108,14 +108,14 @@
 
 /* EVENTS SECTION */
 .events-section {
-    background: #e6f0ec;
+    background: var(--background);
     margin: 0 auto;
     padding: 3rem 1.5rem;
     width: 100%;
 }
 .events-section a {
     text-decoration: none;
-    color: #c97c67;
+    color: var(--kafe);
 }
 .events-content {
     display: flex;
@@ -139,7 +139,7 @@
     font-size: 1.1rem;
     font-weight: 700;
     margin-bottom: 0.5rem;
-    color: #c98169;
+    color: var(--kafe);
 }
 .event-item p {
     color: #222;
@@ -161,11 +161,10 @@
     box-shadow: 0 2px 8px rgba(44, 62, 80, 0.08);
 }
 
-/* VISIT STORE SECTION */
 .visit-store-section, .contact-section {
     display: flex;
     min-height: 320px;
-    background: #e6f0ec;
+    background: var(--background);
     align-items: stretch;
     margin: 0;
 }
@@ -185,7 +184,7 @@
 
 .visit-store-info, .contact-info {
     flex: 1;
-    background: #c98169;
+    background: var(--kafe);
     color: #fff;
     display: flex;
     flex-direction: column;
@@ -205,7 +204,7 @@
 }
 .map-btn {
     background: #fff;
-    color: #c98169;
+    color: var(--kafe);
     padding: 0.7rem 2rem;
     border: none;
     border-radius: 2rem;
@@ -216,22 +215,22 @@
     cursor: pointer;
 }
 .map-btn:hover {
-    background: #e6f0ec;
-    color: #c97c67;
+    background: var(--background);
+    color: var(--hover);
 }
 
 /* CONTACT SECTION */
 .contact-section {
     display: flex;
     min-height: 320px;
-    background: #e6f0ec;
+    background: var(--background);
     align-items: stretch;
     margin: 0;
    
 }
 .contact-info {
     flex: 1;
-    background: #c98169;
+    background: var(--kafe);
     color: #fff;
     display: flex;
     flex-direction: column;
@@ -261,7 +260,6 @@
     display: block;
 }
 
-/* RESPONSIVE DESIGN */
 @media (max-width: 1500px) {
     body {
         width: 100%;

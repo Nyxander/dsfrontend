@@ -109,7 +109,7 @@ function loadEventDetails() {
         document.querySelector('.event-detail-content').innerHTML = `
         
         <div class="container text-center py-5">
-                <h1 style="color: #333; margin-bottom: 1.5rem; font-family: 'Fredericka the Great', cursive;">${event.emri}</h1>
+                <h1 style="color: #333; margin-bottom: 1.5rem; font-family:  var(--quote);">${event.emri}</h1>
                 <br>
                 ${
                     event.imgs
